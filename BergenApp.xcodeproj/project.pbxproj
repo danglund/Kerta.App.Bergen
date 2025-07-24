@@ -24,6 +24,8 @@
 		A1234567890123456789013C /* Bergen5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A1234567890123456789013D /* Bergen5.mp3 */; };
 		A1234567890123456789013E /* Bergen6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A1234567890123456789013F /* Bergen6.mp3 */; };
 		A1234567890123456789013G /* Bergen7.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A1234567890123456789013H /* Bergen7.m4a */; };
+		E11AF9D70D3F45D4B843CA78 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEC4C8E97AE405993DB5F02 /* WeatherView.swift */; };
+		2B9729723C714DC180E95987 /* RainCheckProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5E379F4114433D82C03888 /* RainCheckProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		A1234567890123456789013D /* Bergen5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Bergen5.mp3; sourceTree = "<group>"; };
 		A1234567890123456789013F /* Bergen6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Bergen6.mp3; sourceTree = "<group>"; };
 		A1234567890123456789013H /* Bergen7.m4a */ = {isa = PBXFileReference; lastKnownFileType = audio.m4a; path = Bergen7.m4a; sourceTree = "<group>"; };
+		FEEC4C8E97AE405993DB5F02 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		7A5E379F4114433D82C03888 /* RainCheckProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainCheckProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 				A1234567890123456789012F /* KartView.swift */,
 				A1234567890123456789012H /* FaktaView.swift */,
 				A1234567890123456789012J /* MerView.swift */,
+				FEEC4C8E97AE405993DB5F02 /* WeatherView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -103,6 +108,7 @@
 			children = (
 				A1234567890123456789012L /* AudioService.swift */,
 				A1234567890123456789012N /* LocationService.swift */,
+				7A5E379F4114433D82C03888 /* RainCheckProvider.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -223,6 +229,8 @@
 				A1234567890123456789012K /* AudioService.swift in Sources */,
 				A1234567890123456789012M /* LocationService.swift in Sources */,
 				A1234567890123456789012O /* BergenFact.swift in Sources */,
+				E11AF9D70D3F45D4B843CA78 /* WeatherView.swift in Sources */,
+				2B9729723C714DC180E95987 /* RainCheckProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

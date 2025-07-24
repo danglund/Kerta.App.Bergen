@@ -16,7 +16,15 @@ struct FeatureItem: Identifiable {
 }
 
 struct MerView: View {
+    @State private var navigationPath = NavigationPath()
+    
     private let features: [FeatureItem] = [
+        FeatureItem(
+            title: "Bergen været",
+            description: "Værmelding med ekte bergensk personlighet",
+            icon: "cloud.rain",
+            status: .available
+        ),
         FeatureItem(
             title: "Skann en meny",
             description: "Ta bilde av meny og få den lest opp på bergensk",
@@ -42,12 +50,6 @@ struct MerView: View {
             status: .comingSoon
         ),
         FeatureItem(
-            title: "Bergen været",
-            description: "Værmelding med ekte bergensk personlighet",
-            icon: "cloud.rain",
-            status: .comingSoon
-        ),
-        FeatureItem(
             title: "Bergen ord",
             description: "Lær bergensk dialekt og uttrykk",
             icon: "text.bubble",
@@ -56,7 +58,7 @@ struct MerView: View {
     ]
     
     var body: some View {
-        NavigationView {
+        NavigationStack(path: $navigationPath) {
             List {
                 Section {
                     VStack(alignment: .leading, spacing: 12) {
@@ -74,17 +76,28 @@ struct MerView: View {
                 
                 Section("Funksjoner") {
                     ForEach(features) { feature in
-                        FeatureRow(feature: feature)
+                        FeatureRow(feature: feature, navigationPath: $navigationPath)
                     }
                 }
             }
             .navigationTitle("Mer")
+            .navigationDestination(for: String.self) { destination in
+                switch destination {
+                case "Bergen været":
+                    WeatherView()
+                default:
+                    Text("Feature kommer snart")
+                        .font(.title2)
+                        .foregroundColor(.secondary)
+                }
+            }
         }
     }
 }
 
 struct FeatureRow: View {
     let feature: FeatureItem
+    @Binding var navigationPath: NavigationPath
     
     var body: some View {
         HStack(spacing: 16) {
@@ -183,8 +196,7 @@ struct FeatureRow: View {
     private func handleFeatureTap() {
         switch feature.status {
         case .available:
-            // Navigate to feature
-            print("Navigate to \(feature.title)")
+            navigationPath.append(feature.title)
         case .experimental:
             // Show experimental warning, then navigate
             print("Show experimental warning for \(feature.title)")
