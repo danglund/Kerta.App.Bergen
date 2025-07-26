@@ -1,0 +1,95 @@
+{
+  "chapter": "Vanlige bergenske uttrykk",
+  "entries": [
+    {
+      "term": "Den e' brun",
+      "correct_options": ["Den er grei"],
+      "long_explanation": null,
+      "wrong_options": ["Den er brun", "Det er dårlig", "Det er skummelt", "Det er langt", "Det er tungt", "Det er kaldt"]
+    },
+    {
+      "term": "Dette i do",
+      "correct_options": ["Bli helt slappfisk", "Falle i staver"],
+      "long_explanation": null,
+      "wrong_options": ["Gå i do", "Gråte i do", "Spise i do", "Sove i do", "Skrive i do", "Løpe i do"]
+    },
+    {
+      "term": "Flonkane ny",
+      "correct_options": ["Helt ny"],
+      "long_explanation": null,
+      "wrong_options": ["Helt gammel", "Halv ny", "Nesten ny", "Veldig brukt", "Svært slitt", "Noe slitt"]
+    },
+    {
+      "term": "Gå mann!",
+      "correct_options": ["Jøye meg!"],
+      "long_explanation": ["Utrop som uttrykker overraskelse. Alternativ: 'gå te' Lübeck'"],
+      "wrong_options": ["Bli mann", "Gå nå", "Se mann", "Hils mann", "Snakk mann", "Møt mann"]
+    },
+    {
+      "term": "Gå te pises",
+      "correct_options": ["Gå til helvete", "Gå i stykker"],
+      "long_explanation": null,
+      "wrong_options": ["Gå til Paris", "Gå til pises", "Gå til leir", "Stå i kø", "Gå langs veien", "Gå rett frem"]
+    },
+    {
+      "term": "Ha det på gefylen",
+      "correct_options": ["Ha det på følelsen"],
+      "long_explanation": null,
+      "wrong_options": ["Snakke om følelsen", "Ha det fysisk", "Se det skje", "Høre det skje", "Lese det i boka", "Smake det"]
+    },
+    {
+      "term": "En‑endinger",
+      "correct_options": ["Bøy personnavn med –en"],
+      "long_explanation": ["Eks: Erikaen, Tomen – vanlig i familiebruk, spesielt eldre generasjon"],
+      "wrong_options": ["Følge med –en", "Periode‑endinger", "Flertallsending", "Entallsending", "Artikkel‑ending", "Bøyningsending"]
+    },
+    {
+      "term": "Kalla",
+      "correct_options": ["Hva slags", "Hvilken"],
+      "long_explanation": null,
+      "wrong_options": ["Kalde ting", "Kaldt vær", "Ringe", "Tilkalle", "Invite", "Spørre om navn"]
+    },
+    {
+      "term": "Ke' det går i",
+      "correct_options": ["Hvordan går det"],
+      "long_explanation": null,
+      "wrong_options": ["Hva er det går i", "Hva skjer", "Hva heter det", "Hva gjør du", "Hva skal vi", "Hva skal du"]
+    },
+    {
+      "term": "Kjusa deg!",
+      "correct_options": ["Heldiggrisen!"],
+      "long_explanation": null,
+      "wrong_options": ["Kyssa deg", "Kjøp deg", "Gåsa deg", "Kosa deg", "Kjør deg", "Kyssa meg"]
+    },
+    {
+      "term": "Knall i padden",
+      "correct_options": ["Liv/ røre", "Kjempegreier", "Kuult"],
+      "long_explanation": ["Uttrykk brukt om noe veldig bra eller morsomt."],
+      "wrong_options": ["Dårlig i padden", "Stille i padden", "Vått i padden", "Vanskelig i padden", "Dyr i padden", "Kjedelig i padden"]
+    },
+    {
+      "term": "Slitan",
+      "correct_options": ["Gratulere med nye klær"],
+      "long_explanation": null,
+      "wrong_options": ["Sulte", "Gi gaver", "Sover", "Tøyse", "Gi kompliment", "Gi råd"]
+    },
+    {
+      "term": "Stompe kompen",
+      "correct_options": ["Stupe kråke"],
+      "long_explanation": null,
+      "wrong_options": ["Trampe kompen", "Stupe langt", "Hoppe lange", "Gjøre salto", "Fall enkelt", "Vinkle kompen"]
+    },
+    {
+      "term": "Å kule an",
+      "correct_options": ["Å slappe av"],
+      "long_explanation": null,
+      "wrong_options": ["Å kysse an", "Å krangle", "Å synge", "Å legge seg", "Å kjøre opp", "Å slå an"]
+    },
+    {
+      "term": "Vi'kje / va'kje / gid'kje",
+      "correct_options": ["Vil ikke", "Var ikke", "Gidder ikke"],
+      "long_explanation": ["Sammentrekninger: vi'kje = vil ikke; va'kje = var ikke; gid'kje = gidder ikke."],
+      "wrong_options": ["Kommer ikke", "Ser ikke", "Hører ikke", "Spiser ikke", "Leser ikke", "Skriver ikke"]
+    }
+  ]
+}

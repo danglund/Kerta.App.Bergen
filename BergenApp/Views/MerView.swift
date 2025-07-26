@@ -48,12 +48,6 @@ struct MerView: View {
             description: "Møt andre Bergen-entusiaster for dating",
             icon: "heart.circle",
             status: .comingSoon
-        ),
-        FeatureItem(
-            title: "Bergen ord",
-            description: "Lær bergensk dialekt og uttrykk",
-            icon: "text.bubble",
-            status: .comingSoon
         )
     ]
     

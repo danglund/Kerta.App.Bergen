@@ -6,11 +6,11 @@ struct BergenFact: Codable, Identifiable {
     let category: String?
     let imageName: String
     
-    init(text: String, category: String? = nil, imageName: String? = nil) {
+    init(text: String, category: String? = nil, imageName: String = "19-regnbyen-fjordene") {
         self.id = UUID()
         self.text = text
         self.category = category
-        self.imageName = imageName ?? "bergen-default"
+        self.imageName = imageName
     }
     
     enum CodingKeys: String, CodingKey {
@@ -22,7 +22,7 @@ struct BergenFact: Codable, Identifiable {
         self.id = UUID()
         self.text = try container.decode(String.self, forKey: .text)
         self.category = try container.decodeIfPresent(String.self, forKey: .category)
-        self.imageName = try container.decodeIfPresent(String.self, forKey: .imageName) ?? "bergen-default"
+        self.imageName = try container.decodeIfPresent(String.self, forKey: .imageName) ?? "19-regnbyen-fjordene"
     }
     
     func encode(to encoder: Encoder) throws {
@@ -86,12 +86,12 @@ class BergenFactsService: ObservableObject {
     
     private var defaultFacts: [BergenFact] {
         [
-            BergenFact(text: "Bergen ble grunnlagt omkring år 1070 og var Norges hovedstad på 1200-tallet.", category: "Historie", imageName: "01-grunnlagt-1070"),
-            BergenFact(text: "Fisketorget i Bergen har vært en handelsplass i over 800 år.", category: "Historie", imageName: "02-fisketorget-800-aar"),
-            BergenFact(text: "Bergen regner i gjennomsnitt 200 dager i året - mer enn noen annen norsk by.", category: "Vær", imageName: "03-regn-200-dager"),
-            BergenFact(text: "Bryggen i Bergen er på UNESCOs verdensarvliste siden 1979.", category: "Kultur", imageName: "04-bryggen-unesco"),
-            BergenFact(text: "Bergen er omringet av syv fjell, kjent som 'De syv fjell'.", category: "Geografi", imageName: "05-syv-fjell"),
-            BergenFact(text: "Universitetet i Bergen ble grunnlagt i 1946 og er Norges nest eldste universitet.", category: "Utdanning", imageName: "06-uib-1946")
+            BergenFact(text: "Bergen ble grunnlagt omkring år 1070 og var Norges hovedstad på 1200-tallet.", category: "Historie", imageName: "01-grunnlagt-1070-5"),
+            BergenFact(text: "Fisketorget i Bergen har vært en handelsplass i over 800 år.", category: "Historie", imageName: "02-fisketorget-800-aar-5"),
+            BergenFact(text: "Bergen regner i gjennomsnitt 200 dager i året - mer enn noen annen norsk by.", category: "Vær", imageName: "03-regn-200-dager-4"),
+            BergenFact(text: "Bryggen i Bergen er på UNESCOs verdensarvliste siden 1979.", category: "Kultur", imageName: "04-bryggen-unesco-5"),
+            BergenFact(text: "Bergen er omringet av syv fjell, kjent som 'De syv fjell'.", category: "Geografi", imageName: "05-syv-fjell-3"),
+            BergenFact(text: "Universitetet i Bergen ble grunnlagt i 1946 og er Norges nest eldste universitet.", category: "Utdanning", imageName: "19-regnbyen-fjordene")
         ]
     }
 }
