@@ -34,39 +34,44 @@ struct FaktaView: View {
                         // Floating text box positioned in top 1/3
                         VStack {
                             if let fact = factsService.currentFact {
-                                ZStack(alignment: .bottomTrailing) {
-                                    Text(fact.text)
-                                        .font(.system(size: 18, weight: .medium, design: .rounded))
-                                        .lineSpacing(6)
-                                        .multilineTextAlignment(.center)
-                                        .foregroundColor(.white)
-                                        .padding(.horizontal, 24)
-                                        .padding(.vertical, 20)
-                                        .background(
-                                            RoundedRectangle(cornerRadius: 16)
-                                                .fill(.ultraThinMaterial.opacity(0.8))
-                                                .overlay(
-                                                    RoundedRectangle(cornerRadius: 16)
-                                                        .fill(Color.black.opacity(0.6))
-                                                )
-                                                .shadow(color: .black.opacity(0.3), radius: 12, x: 0, y: 4)
-                                        )
-                                    
-                                    // Touch icon in lower right corner with subtle animations
-                                    Image(systemName: "hand.tap.fill")
-                                        .font(.system(size: 14, weight: .medium))
-                                        .foregroundColor(.white.opacity(iconOpacity))
-                                        .padding(6)
-                                        .background(
-                                            Circle()
-                                                .fill(Color.black.opacity(0.2))
-                                        )
-                                        .scaleEffect(iconScale)
-                                        .offset(x: -6, y: -6)
-                                }
-                                .padding(.horizontal, 32)
+                                Text(fact.text)
+                                    .font(.system(size: 18, weight: .medium, design: .rounded))
+                                    .lineSpacing(6)
+                                    .multilineTextAlignment(.center)
+                                    .foregroundColor(.white)
+                                    .padding(.horizontal, 24)
+                                    .padding(.vertical, 20)
+                                    .background(
+                                        RoundedRectangle(cornerRadius: 16)
+                                            .fill(.ultraThinMaterial.opacity(0.8))
+                                            .overlay(
+                                                RoundedRectangle(cornerRadius: 16)
+                                                    .fill(Color.black.opacity(0.6))
+                                            )
+                                            .shadow(color: .black.opacity(0.3), radius: 12, x: 0, y: 4)
+                                    )
+                                    .padding(.horizontal, 32)
                             }
                             
+                            Spacer()
+                        }
+                        
+                        // Fixed position tap icon in top-right corner
+                        VStack {
+                            HStack {
+                                Spacer()
+                                Image(systemName: "hand.tap.fill")
+                                    .font(.system(size: 14, weight: .medium))
+                                    .foregroundColor(.white.opacity(iconOpacity))
+                                    .padding(8)
+                                    .background(
+                                        Circle()
+                                            .fill(Color.black.opacity(0.3))
+                                    )
+                                    .scaleEffect(iconScale)
+                                    .padding(.top, 20)
+                                    .padding(.trailing, 20)
+                            }
                             Spacer()
                         }
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
