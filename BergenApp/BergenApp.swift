@@ -94,7 +94,7 @@ struct ContentView: View {
                     BergenOrdView()
                         .environmentObject(audioService)
                         .tabItem {
-                            Label("Bergen ord", systemImage: "text.bubble")
+                            Label("Bergensk", systemImage: "text.bubble")
                         }
                         .tag(2)
                     

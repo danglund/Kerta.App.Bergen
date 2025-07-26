@@ -1,0 +1,193 @@
+{
+  "chapter": "Dialektord om personer",
+  "entries": [
+    {
+      "term": "Madammen",
+      "correct_options": ["Fruen i huset"],
+      "long_explanation": null,
+      "wrong_options": [
+        "overlegen",
+        "bussjåfør",
+        "villstyring",
+        "kjedelig person",
+        "støvlett",
+        "dumskalle"
+      ]
+    },
+    {
+      "term": "Brelete",
+      "correct_options": ["Bortskjemt", "Kosete"],
+      "long_explanation": null,
+      "wrong_options": [
+        "bussjåfør",
+        "gammel mann",
+        "streng lærer",
+        "klovn",
+        "bryggesjauer",
+        "fiskesuppe"
+      ]
+    },
+    {
+      "term": "Høg/høy på peren",
+      "correct_options": ["Overlegen"],
+      "long_explanation": null,
+      "wrong_options": [
+        "kortvokst",
+        "utslitt",
+        "forsinket buss",
+        "hjemløs",
+        "fryktløs",
+        "mystisk"
+      ]
+    },
+    {
+      "term": "Idde",
+      "correct_options": ["Idiot"],
+      "long_explanation": null,
+      "wrong_options": [
+        "genial person",
+        "trikkefører",
+        "arkitekt",
+        "sjørøver",
+        "hjemlengsel",
+        "torden"
+      ]
+    },
+    {
+      "term": "Kjik",
+      "correct_options": ["Kjæreste"],
+      "long_explanation": null,
+      "wrong_options": [
+        "tante",
+        "vaktmester",
+        "sydvest",
+        "postkasse",
+        "hestehov",
+        "gitarist"
+      ]
+    },
+    {
+      "term": "Kjommi/tjommi",
+      "correct_options": ["Kompis"],
+      "long_explanation": null,
+      "wrong_options": [
+        "fiende",
+        "søring",
+        "vaktpost",
+        "klesklype",
+        "klagesang",
+        "smørbrød"
+      ]
+    },
+    {
+      "term": "Kjuagutt",
+      "correct_options": ["Skøyergutt", "En \"ekte\" bergenser"],
+      "long_explanation": "Brukes ofte om en guttestrek-type med bergensk selvtillit og glimt i øyet.",
+      "wrong_options": [
+        "politiker",
+        "brannslange",
+        "bilmekaniker",
+        "skoleuniform",
+        "grinete nabo",
+        "brostein"
+      ]
+    },
+    {
+      "term": "Han/hon hinn",
+      "correct_options": ["Han andre", "Hun andre"],
+      "long_explanation": null,
+      "wrong_options": [
+        "den samme",
+        "naboens hund",
+        "bussen fra Åsane",
+        "venstre hånd",
+        "tysk turist",
+        "gammel fisk"
+      ]
+    },
+    {
+      "term": "Homlepong",
+      "correct_options": ["Dust"],
+      "long_explanation": null,
+      "wrong_options": [
+        "sjakkspiller",
+        "helikopter",
+        "gullfisk",
+        "støvsuger",
+        "kaffekopp",
+        "rørlegger"
+      ]
+    },
+    {
+      "term": "Løkrull",
+      "correct_options": ["Dust"],
+      "long_explanation": "Brukes om noen som har gjort noe helt idiotisk – som om hjernen er byttet ut med en løkrull.",
+      "wrong_options": [
+        "kryddertype",
+        "gammel måke",
+        "værmelding",
+        "bærplukker",
+        "sjøsprøyt",
+        "vindmåler"
+      ]
+    },
+    {
+      "term": "Min mor og di",
+      "correct_options": [
+        "Mor og far",
+        "Familiemedlemmer i samme hus"
+      ],
+      "long_explanation": null,
+      "wrong_options": [
+        "onkel og tante",
+        "hybelkameratene dine",
+        "klassekamerater",
+        "nabohus",
+        "fiskere",
+        "brannsupportere"
+      ]
+    },
+    {
+      "term": "Rabbagast",
+      "correct_options": ["Villstyring"],
+      "long_explanation": null,
+      "wrong_options": [
+        "organist",
+        "snøskuffe",
+        "passkontrollør",
+        "barneskole",
+        "gammel kåpe",
+        "dommerfløyte"
+      ]
+    },
+    {
+      "term": "Rævadilter",
+      "correct_options": [
+        "Barn som løper etter buekorps",
+        "En som etterdilter"
+      ],
+      "long_explanation": null,
+      "wrong_options": [
+        "korpsleder",
+        "speiderleder",
+        "kjegle",
+        "løpesko",
+        "brødfjøl",
+        "veivesen"
+      ]
+    },
+    {
+      "term": "Toskehovve",
+      "correct_options": ["Skjellsord"],
+      "long_explanation": null,
+      "wrong_options": [
+        "hodeplagg",
+        "målebeger",
+        "tårnbygger",
+        "lastebil",
+        "kartleser",
+        "nyhetsanker"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "chapter": "Hva betyr bergenske ord?",
+  "entries": [
+    {
+      "term": "Affisere",
+      "correct_options": ["Ikke ta notis av", "Ikke la seg bringe ut av fatning"],
+      "long_explanation": null,
+      "wrong_options": ["fremheve", "rotere", "analysere", "feire", "forkaste", "kommentere"]
+    },
+    {
+      "term": "Akkedere",
+      "correct_options": ["Forhandle", "Heftig diskusjon"],
+      "long_explanation": null,
+      "wrong_options": ["sove", "sykle", "leke", "lytte", "pusse", "synge"]
+    },
+    {
+      "term": "Altereret",
+      "correct_options": ["Nervøs", "Oppspilt"],
+      "long_explanation": null,
+      "wrong_options": ["rolig", "trist", "sliten", "rolig", "kjedelig", "tilfreds"]
+    },
+    {
+      "term": "Ani",
+      "correct_options": ["Komme borti"],
+      "long_explanation": null,
+      "wrong_options": ["gå forbi", "sove over", "gi opp", "hoppe over", "skru av", "kaste bort"]
+    },
+    {
+      "term": "Belite seg",
+      "correct_options": ["Gi seg"],
+      "long_explanation": ["oppså ferdig med situasjonen"],
+      "wrong_options": ["ta til", "stå på", "bake", "holde ut", "forsinke", "delta"]
+    },
+    {
+      "term": "Dånedimpen",
+      "correct_options": ["Nesten besvimt"],
+      "long_explanation": ["nesten besvimt av overraskelse eller sjokk"],
+      "wrong_options": ["sover", "kjeder seg", "deler ut", "vinner", "gråter", "spiser"]
+    },
+    {
+      "term": "Dies",
+      "correct_options": ["Deres"],
+      "long_explanation": null,
+      "wrong_options": ["dette", "dine", "våres", "hennes", "sin", "mine"]
+    },
+    {
+      "term": "Dòtte",
+      "correct_options": ["Falt"],
+      "long_explanation": null,
+      "wrong_options": ["satt", "sto", "løp", "vokste", "stakk", "doblet"]
+    },
+    {
+      "term": "Dikkedarier",
+      "correct_options": ["Om og men"],
+      "long_explanation": null,
+      "wrong_options": ["ro", "smil", "skrik", "kaos", "orden", "hygge"]
+    },
+    {
+      "term": "Doddegutt",
+      "correct_options": ["Pappagutt", "Snobb"],
+      "long_explanation": null,
+      "wrong_options": ["arbeider", "bonde", "student", "guttunge", "lokal", "fisker"]
+    },
+    {
+      "term": "Drag over kjeften",
+      "correct_options": ["Lusing"],
+      "long_explanation": null,
+      "wrong_options": ["klem", "håndtrykk", "kyss", "høy femmer", "fjæring", "gave"]
+    },
+    {
+      "term": "Dulle med",
+      "correct_options": ["Drive med", "Somle med"],
+      "long_explanation": null,
+      "wrong_options": ["løpe etter", "leke med", "kaste bort", "pusse", "skrive", "hente"]
+    },
+    {
+      "term": "Druse te",
+      "correct_options": ["Sparke hardt til noe"],
+      "long_explanation": null,
+      "wrong_options": ["drikke mye", "ropte høyt", "skjelve", "leke ball", "kruetre", "sitte stille"]
+    },
+    {
+      "term": "Drøle",
+      "correct_options": ["Somle"],
+      "long_explanation": null,
+      "wrong_options": ["løpe", "hoppe", "skrive", "svømme", "skynde seg", "kjøre"]
+    },
+    {
+      "term": "Fakerten",
+      "correct_options": ["Søren"],
+      "long_explanation": null,
+      "wrong_options": ["hallo", "takk", "helt", "gledelig", "si takk", "gnien"]
+    },
+    {
+      "term": "Gem",
+      "correct_options": ["Grei", "Medgjørlig"],
+      "long_explanation": null,
+      "wrong_options": ["vrang", "vanskelig", "sint", "sur", "bråkete", "hissig"]
+    },
+    {
+      "term": "Hamna",
+      "correct_options": ["Ende opp"],
+      "long_explanation": null,
+      "wrong_options": ["starte", "skulle begynne", "feire", "svinge", "flytte", "brenne"]
+    },
+    {
+      "term": "Knall i padden",
+      "correct_options": ["Kjempebra", "Veldig gøy"],
+      "long_explanation": ["brukes om noe som er super kult eller morsomt"],
+      "wrong_options": ["farlig", "kjedelig", "vanskelig", "trist", "skummelt", "sakte"]
+    },
+    {
+      "term": "Ta det på gefylen",
+      "correct_options": ["Ha det på følelsen"],
+      "long_explanation": null,
+      "wrong_options": ["se det skje", "høre det selv", "lese det i boka", "føle det fysisk", "smake det", "lukte det"]
+    },
+    {
+      "term": "Molefonken",
+      "correct_options": ["Sur", "Trist", "Fornærmet"],
+      "long_explanation": null,
+      "wrong_options": ["glad", "latterfull", "spent", "rolig", "nysgjerrig", "energisk"]
+    },
+    {
+      "term": "Månebedotten",
+      "correct_options": ["Overrasket"],
+      "long_explanation": null,
+      "wrong_options": ["rolig", "laus", "glad", "trøtt", "søvnig", "fornøyd"]
+    },
+    {
+      "term": "Tidi",
+      "correct_options": ["Morsomt"],
+      "long_explanation": null,
+      "wrong_options": ["trist", "alvorlig", "skummelt", "surt", "sakte", "alent"]
+    },
+    {
+      "term": "Opplett",
+      "correct_options": ["Oppholdsvær mellom regnbygene"],
+      "long_explanation": null,
+      "wrong_options": ["regn", "snø", "vind", "tåke", "storm", "kulde"]
+    },
+    {
+      "term": "Prikkevere",
+      "correct_options": ["Rydde", "Ta vare på"],
+      "long_explanation": null,
+      "wrong_options": ["søle til", "miste", "spille", "late som", "skjelle ut", "mure"]
+    },
+    {
+      "term": "Sjaine",
+      "correct_options": ["Ordne", "Pynte", "Pusse opp"],
+      "long_explanation": null,
+      "wrong_options": ["søppel", "klippe", "brette", "fjerne", "male", "skrive"]
+    },
+    {
+      "term": "Sløkket",
+      "correct_options": ["Dum", "Helt utenfor"],
+      "long_explanation": null,
+      "wrong_options": ["smart", "styrtrik", "aktiv", "energisk", "rolig", "høflig"]
+    },
+    {
+      "term": "Smite",
+      "correct_options": ["Snike i køen"],
+      "long_explanation": null,
+      "wrong_options": ["vente i kø", "stå stille", "gi opp turen", "hoppe foran", "feire", "leke"]
+    },
+    {
+      "term": "Slitan",
+      "correct_options": ["Gratulere med nye klær el.l."],
+      "long_explanation": null,
+      "wrong_options": ["sulte", "kle av", "sove", "tøyse", "skynte seg", "gi gaver"]
+    }
+  ]
+}

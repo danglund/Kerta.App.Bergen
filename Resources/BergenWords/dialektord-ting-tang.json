@@ -1,0 +1,119 @@
+{
+  "chapter": "Dialektord om ting og tang",
+  "entries": [
+    {
+      "term": "Bekkalokk",
+      "correct_options": ["Kummelokk"],
+      "long_explanation": null,
+      "wrong_options": ["paraply", "knebeskytter", "fiskestang", "sko", "takkel", "måke"]
+    },
+    {
+      "term": "Bennaren",
+      "correct_options": ["Bensinstasjon"],
+      "long_explanation": null,
+      "wrong_options": ["konsumvare", "droppautomat", "bibliotek", "trikkestasjon", "navkontor", "leikeplass"]
+    },
+    {
+      "term": "Blautis",
+      "correct_options": ["Bløtekake"],
+      "long_explanation": null,
+      "wrong_options": ["brunost", "suppe", "sandwich", "isvaffel", "syltetøy", "kaffekopp"]
+    },
+    {
+      "term": "Boss",
+      "correct_options": ["Søppel"],
+      "long_explanation": null,
+      "wrong_options": ["søl", "penger", "gull", "fisk", "buss", "vårbris"]
+    },
+    {
+      "term": "Daier",
+      "correct_options": ["Bryst", "Pupper"],
+      "long_explanation": null,
+      "wrong_options": ["rygg", "hake", "kne", "øre", "tå", "håndledd"]
+    },
+    {
+      "term": "Disse",
+      "correct_options": ["Huske på lekestativ"],
+      "long_explanation": null,
+      "wrong_options": ["sklie", "gyngestativ", "taustige", "sandkasse", "fotballmål", "klatrestativ"]
+    },
+    {
+      "term": "Flais",
+      "correct_options": ["Hårsveis"],
+      "long_explanation": null,
+      "wrong_options": ["tannbørste", "bukser", "sko", "parfyme", "skjorte", "jakke"]
+    },
+    {
+      "term": "Labber",
+      "correct_options": ["Sokker"],
+      "long_explanation": null,
+      "wrong_options": ["hansker", "hatt", "undertøy", "skjerf", "belte", "veske"]
+    },
+    {
+      "term": "Melodont",
+      "correct_options": ["Melodi"],
+      "long_explanation": null,
+      "wrong_options": ["maleri", "konsert", "lyd", "symfoni", "tekst", "tromme"]
+    },
+    {
+      "term": "Myggel",
+      "correct_options": ["Mugg"],
+      "long_explanation": null,
+      "wrong_options": ["allergi", "plass", "vann", "støv", "sopp", "is"]
+    },
+    {
+      "term": "Naien",
+      "correct_options": ["Nesen"],
+      "long_explanation": null,
+      "wrong_options": ["øyet", "haken", "pannen", "kjeven", "labb", "hals"]
+    },
+    {
+      "term": "Pottemonè",
+      "correct_options": ["Pengepung"],
+      "long_explanation": null,
+      "wrong_options": ["ryggsekk", "telefon", "skrivebok", "veske", "lommebok", "lommetørkle"]
+    },
+    {
+      "term": "Smau",
+      "correct_options": ["Trang gate"],
+      "long_explanation": null,
+      "wrong_options": ["torg", "stor vei", "skolevei", "bussholdeplass", "fjellsti", "elv"]
+    },
+    {
+      "term": "Snått",
+      "correct_options": ["Snørr"],
+      "long_explanation": null,
+      "wrong_options": ["spytt", "tårer", "sår", "svette", "hår", "gave"]
+    },
+    {
+      "term": "Sos",
+      "correct_options": ["Saus"],
+      "long_explanation": null,
+      "wrong_options": ["vann", "kraft", "dressing", "drikke", "syltetøy", "suppe"]
+    },
+    {
+      "term": "Staddaen",
+      "correct_options": ["Brann stadion"],
+      "long_explanation": null,
+      "wrong_options": ["fotballbane i Oslo", "skøytebane", "opera", "bibliotek", "kongresshall", "flyplass"]
+    },
+    {
+      "term": "Undikk",
+      "correct_options": ["Underbukse"],
+      "long_explanation": null,
+      "wrong_options": ["bukse", "skjorte", "t-skjorte", "hatt", "sokk", "badedrakt"]
+    },
+    {
+      "term": "Tebrød",
+      "correct_options": ["Wienerbrød"],
+      "long_explanation": null,
+      "wrong_options": ["krutonger", "sandwich", "skolefrokost", "scone", "pannekake", "kanelbolle"]
+    },
+    {
+      "term": "Pakkenellik",
+      "correct_options": ["En liten pakke", "Små poser"],
+      "long_explanation": "Ofte brukt i forbindelse med reise – små pakker eller poser med nødvendigheter.",
+      "wrong_options": ["postsekk", "stor koffert", "bagasjevogn", "håndbagasje", "fraktekspress", "papirkurv"]
+    }
+  ]
+}

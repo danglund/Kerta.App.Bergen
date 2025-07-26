@@ -98,12 +98,31 @@ class AudioService: ObservableObject {
     }
     
     func playRandomBergenSample() {
-        guard let randomSample = bergenSamples.randomElement(),
-              let url = Bundle.main.url(forResource: randomSample.replacingOccurrences(of: ".mp3", with: "").replacingOccurrences(of: ".m4a", with: ""), withExtension: randomSample.contains(".mp3") ? "mp3" : "m4a") else {
-            print("Could not find audio file")
+        guard let randomSample = bergenSamples.randomElement() else {
+            print("No Bergen samples available")
             return
         }
         
+        let filename = randomSample.replacingOccurrences(of: ".mp3", with: "").replacingOccurrences(of: ".m4a", with: "")
+        let fileExtension = randomSample.contains(".mp3") ? "mp3" : "m4a"
+        
+        guard let url = Bundle.main.url(forResource: filename, withExtension: fileExtension) else {
+            print("Could not find audio file: \(randomSample)")
+            return
+        }
+        
+        // Create a track object for the Bergen sample
+        let track = MusicTrack(
+            id: filename,
+            title: "Bergen Sample \(filename.last ?? "1")",
+            composer: "Bergen Sounds",
+            filename: randomSample,
+            duration: nil,
+            year: nil,
+            description: "Authentic sounds from Bergen"
+        )
+        
+        currentTrack = track
         playAudio(from: url)
     }
     
@@ -158,6 +177,17 @@ class AudioService: ObservableObject {
                 duration: 150.0,
                 year: 1875,
                 description: "From Peer Gynt Suite No. 1, Op. 46"
+            )
+        case griegAnitrasDream:
+            filename = "Classicals.de - Grieg - Peer Gynt Suite No. 1, Op. 46 - III. Anitra's Dream"
+            track = MusicTrack(
+                id: musicKey,
+                title: "Anitra's Dream",
+                composer: "Edvard Grieg",
+                filename: "\(filename).mp3",
+                duration: 180.0,
+                year: 1875,
+                description: "Peer Gynt Suite No. 1, Op. 46 - III. Anitra's Dream"
             )
         default:
             print("❌ Unknown music key: \(musicKey)")
