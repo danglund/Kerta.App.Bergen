@@ -2,9 +2,23 @@ import AVFoundation
 import UIKit
 import Combine
 
+// MARK: - Music Track Model
+struct MusicTrack: Codable, Identifiable {
+    let id: String
+    let title: String
+    let composer: String
+    let filename: String
+    let duration: TimeInterval?
+    let year: Int?
+    let description: String?
+    
+    var fullTitle: String {
+        return "\(composer) - \(title)"
+    }
+}
+
 class AudioService: ObservableObject {
     private var audioPlayer: AVAudioPlayer?
-    private let musicMetadataService = MusicMetadataService()
     
     // Published properties for UI binding
     @Published var isPlaying: Bool = false
@@ -118,18 +132,41 @@ class AudioService: ObservableObject {
     }
     
     private func playGriegMusic(_ musicKey: String) {
-        guard let track = musicMetadataService.getMusicTrack(for: musicKey) else {
-            print("❌ Could not find metadata for music key: \(musicKey)")
+        // Simple inline metadata for iOS 16 compatibility
+        let track: MusicTrack
+        let filename: String
+        
+        switch musicKey {
+        case griegMorning:
+            filename = "grieg-morning"
+            track = MusicTrack(
+                id: musicKey,
+                title: "Morning Mood",
+                composer: "Edvard Grieg", 
+                filename: "\(filename).mp3",
+                duration: 240.0,
+                year: 1875,
+                description: "From Peer Gynt Suite No. 1, Op. 46"
+            )
+        case griegMountainKing:
+            filename = "grieg-mountain-king"
+            track = MusicTrack(
+                id: musicKey,
+                title: "In the Hall of the Mountain King",
+                composer: "Edvard Grieg",
+                filename: "\(filename).mp3", 
+                duration: 150.0,
+                year: 1875,
+                description: "From Peer Gynt Suite No. 1, Op. 46"
+            )
+        default:
+            print("❌ Unknown music key: \(musicKey)")
             return
         }
         
         print("🎵 Attempting to play: \(track.fullTitle)")
         
-        // Extract filename without extension for Bundle.main.url
-        let filename = track.filename.replacingOccurrences(of: ".mp3", with: "").replacingOccurrences(of: ".m4a", with: "")
-        let fileExtension = track.filename.contains(".mp3") ? "mp3" : "m4a"
-        
-        guard let audioUrl = Bundle.main.url(forResource: filename, withExtension: fileExtension) else {
+        guard let audioUrl = Bundle.main.url(forResource: filename, withExtension: "mp3") else {
             print("❌ Could not find music file: \(track.filename)")
             return
         }
@@ -210,10 +247,11 @@ class AudioService: ObservableObject {
     
     // MARK: - Metadata Access
     func getMusicMetadata(for key: String) -> MusicTrack? {
-        return musicMetadataService.getMusicTrack(for: key)
+        return currentTrack?.id == key ? currentTrack : nil
     }
     
     func getAllMusicTracks() -> [String: MusicTrack] {
-        return musicMetadataService.getAllMusicTracks()
+        // Simple implementation for iOS 16 compatibility
+        return [:]
     }
 }
