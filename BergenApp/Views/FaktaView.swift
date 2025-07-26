@@ -3,7 +3,6 @@ import SwiftUI
 struct FaktaView: View {
     @StateObject private var factsService = BergenFactsService()
     @EnvironmentObject private var audioService: AudioService
-    @State private var showingWelcome = true
     @State private var iconOpacity: Double = 0.6
     @State private var iconScale: Double = 1.0
     @State private var hintTimer: Timer?
@@ -11,34 +10,8 @@ struct FaktaView: View {
     var body: some View {
         GeometryReader { geometry in
             VStack(spacing: 0) {
-                if showingWelcome {
-                    VStack(spacing: 20) {
-                        Image(systemName: "book.circle.fill")
-                            .font(.system(size: 80))
-                            .foregroundColor(.blue)
-                        
-                        Text("Bergen Fakta")
-                            .font(.largeTitle)
-                            .fontWeight(.bold)
-                        
-                        Text("Trykk hvor som helst for å lære noe nytt om Bergen!")
-                            .font(.body)
-                            .foregroundColor(.secondary)
-                            .multilineTextAlignment(.center)
-                            .padding(.horizontal)
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .background(Color(.systemGroupedBackground))
-                    .onTapGesture {
-                        withAnimation(.easeInOut(duration: 0.3)) {
-                            showingWelcome = false
-                            // Play Grieg's Morning when entering facts
-                            audioService.playMorningMusic()
-                        }
-                    }
-                } else {
-                    // Full screen layout with overlay text
-                    ZStack {
+                // Full screen layout with overlay text
+                ZStack {
                         // Full bleed background image (respecting tab bar safe area)
                         if let fact = factsService.currentFact {
                             if UIImage(named: fact.imageName) != nil {
@@ -100,6 +73,8 @@ struct FaktaView: View {
                         .padding(.top, geometry.size.height * 0.2) // More top margin
                         .onAppear {
                             startHintTimer()
+                            // Play Grieg's Morning when entering facts
+                            audioService.playMorningMusic()
                         }
                         .onDisappear {
                             stopHintTimer()
@@ -111,7 +86,6 @@ struct FaktaView: View {
                         }
                         resetHintTimer()
                     }
-                }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .ignoresSafeArea(.container, edges: .top)
