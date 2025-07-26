@@ -51,11 +51,10 @@ struct SimpleMusicPlayerPanel: View {
         .padding(.horizontal, 16)
         .padding(.vertical, 8)
         .background(
-            RoundedRectangle(cornerRadius: 8)
+            Rectangle()
                 .fill(.ultraThinMaterial)
                 .shadow(color: .black.opacity(0.1), radius: 4, x: 0, y: 2)
         )
-        .padding(.horizontal, 16)
     }
 }
 

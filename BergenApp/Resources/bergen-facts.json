@@ -1,102 +1,127 @@
 [
   {
     "text": "Bergen ble grunnlagt omkring år 1070 og var Norges hovedstad på 1200-tallet.",
-    "category": "Historie"
+    "category": "Historie",
+    "imageName": "01-grunnlagt-1070-5"
   },
   {
     "text": "Fisketorget i Bergen har vært en handelsplass i over 800 år.",
-    "category": "Historie"
+    "category": "Historie",
+    "imageName": "02-fisketorget-800-aar-5"
   },
   {
     "text": "Bergen regner i gjennomsnitt 200 dager i året - mer enn noen annen norsk by.",
-    "category": "Vær"
+    "category": "Vær",
+    "imageName": "03-regn-200-dager-4"
   },
   {
     "text": "Bryggen i Bergen er på UNESCOs verdensarvliste siden 1979.",
-    "category": "Kultur"
+    "category": "Kultur",
+    "imageName": "04-bryggen-unesco-5"
   },
   {
     "text": "Bergen er omringet av syv fjell, kjent som 'De syv fjell'.",
-    "category": "Geografi"
+    "category": "Geografi",
+    "imageName": "05-syv-fjell-3"
   },
   {
     "text": "Universitetet i Bergen ble grunnlagt i 1946 og er Norges nest eldste universitet.",
-    "category": "Utdanning"
+    "category": "Utdanning",
+    "imageName": "16-nest-største-by-2"
   },
   {
     "text": "Edvard Grieg, den berømte komponisten, ble født i Bergen i 1843.",
-    "category": "Berømte personer"
+    "category": "Berømte personer",
+    "imageName": "07-grieg-født-bergen-3"
   },
   {
     "text": "Bergen var Europas hovedstad for kultur i 2000.",
-    "category": "Kultur"
+    "category": "Kultur",
+    "imageName": "08-europas-kulturhovedstad-2000-2"
   },
   {
     "text": "Fløyen er det mest besøkte fjellet i Bergen med over 1 million besøkende årlig.",
-    "category": "Turisme"
+    "category": "Turisme",
+    "imageName": "09-fløyen-besøk-2"
   },
   {
     "text": "Bergen hadde den første offentlige gasslykten i Norge i 1848.",
-    "category": "Historie"
+    "category": "Historie",
+    "imageName": "10-gasslykt-1848-1"
   },
   {
     "text": "Bergensk dialekt har mange særegne uttrykk som 'ka du seie da?' og 'det va artig det'.",
-    "category": "Språk"
+    "category": "Språk",
+    "imageName": "11-bergensk-dialekt-uttrykk-2"
   },
   {
     "text": "Bergen International Festival er Nordens eldste musikk- og teaterfestival.",
-    "category": "Kultur"
+    "category": "Kultur",
+    "imageName": "12-festspillene-bergen-2"
   },
   {
     "text": "Hanseatienes museum og Schøtstuene viser Bergens rolle som hansebystat.",
-    "category": "Historie"
+    "category": "Historie",
+    "imageName": "13-hanseatisk-museum-2"
   },
   {
     "text": "Bergen har mer nedbør enn London og Paris til sammen.",
-    "category": "Vær"
+    "category": "Vær",
+    "imageName": "14-bergen-nedbør-2"
   },
   {
     "text": "Troldhaugen, Edvard Griegs hjem, er et av Norges mest besøkte musikk-museer.",
-    "category": "Kultur"
+    "category": "Kultur",
+    "imageName": "15-troldhaugen-2"
   },
   {
     "text": "Bergen er Norges nest største by med omkring 280 000 innbyggere.",
-    "category": "Demografi"
+    "category": "Demografi",
+    "imageName": "16-nest-største-by-3"
   },
   {
     "text": "Bergensbanen til Oslo regnes som en av verdens vakreste togstrekninger.",
-    "category": "Transport"
+    "category": "Transport",
+    "imageName": "17-bergensbanen-2"
   },
   {
     "text": "Gamle Bergen museum har over 50 trebygninger fra 1700- og 1800-tallet.",
-    "category": "Historie"
+    "category": "Historie",
+    "imageName": "18-gamle-bergen-museum-2"
   },
   {
     "text": "Bergen har vært kalt 'Regnbyen' og 'Porten til fjordene'.",
-    "category": "Kallenavn"
+    "category": "Kallenavn",
+    "imageName": "19-regnbyen-fjordene-2"
   },
   {
     "text": "Bergenhus festning er en av Norges eldste og best bevarte festninger.",
-    "category": "Historie"
+    "category": "Historie",
+    "imageName": "20-bergenhus-festning-2"
   },
   {
     "text": "Det regner oftest på Fløyen og minst på Bryggen i Bergen sentrum.",
-    "category": "Vær"
+    "category": "Vær",
+    "imageName": "21-regn-fløyen-bryggen-2"
   },
   {
     "text": "Bergen hadde telefonsentral allerede i 1880, bare fire år etter telefonen kom til Norge.",
-    "category": "Teknologi"
+    "category": "Teknologi",
+    "imageName": "22-telefonsentral-1880-2"
   },
   {
     "text": "Vågen, Bergens indre havn, er et naturlig beskyttet anløpssted.",
-    "category": "Geografi"
+    "category": "Geografi",
+    "imageName": "23-vaagen-havn-2"
   },
   {
     "text": "St. Mary's Church (Mariakirken) er Bergens eldste bygning i bruk.",
-    "category": "Religion"
+    "category": "Religion",
+    "imageName": "24-mariakirken-eldst-2"
   },
   {
     "text": "Bergens Tidende, grunnlagt i 1868, er Vestlandets største avis.",
-    "category": "Media"
+    "category": "Media",
+    "imageName": "25-bergens-tidende-1868-2"
   }
 ]
