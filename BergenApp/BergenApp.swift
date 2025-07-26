@@ -47,9 +47,10 @@ struct ContentView: View {
                         .tag(3)
                 }
                 .accentColor(.blue)
-                .onChange(of: selectedTab) { oldValue, newValue in
+                .onChange(of: selectedTab) { newValue in
                     // Stop music when navigating away from Fakta tab (tab 2)
-                    if oldValue == 2 && newValue != 2 {
+                    // Note: We check if current playing state and new tab is not Fakta
+                    if audioService.isPlaying && newValue != 2 {
                         audioService.stopAudio()
                         print("🎵 Stopped music when leaving Fakta tab")
                     }
