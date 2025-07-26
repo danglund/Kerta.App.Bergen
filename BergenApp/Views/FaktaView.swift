@@ -2,86 +2,156 @@ import SwiftUI
 
 struct FaktaView: View {
     @StateObject private var factsService = BergenFactsService()
+    @EnvironmentObject private var audioService: AudioService
     @State private var showingWelcome = true
+    @State private var iconOpacity: Double = 0.6
+    @State private var iconScale: Double = 1.0
+    @State private var hintTimer: Timer?
     
     var body: some View {
-        NavigationView {
-            GeometryReader { geometry in
-                VStack(spacing: 0) {
-                    if showingWelcome {
-                        VStack(spacing: 20) {
-                            Image(systemName: "book.circle.fill")
-                                .font(.system(size: 80))
-                                .foregroundColor(.blue)
-                            
-                            Text("Bergen Fakta")
-                                .font(.largeTitle)
-                                .fontWeight(.bold)
-                            
-                            Text("Trykk hvor som helst for å lære noe nytt om Bergen!")
-                                .font(.body)
-                                .foregroundColor(.secondary)
-                                .multilineTextAlignment(.center)
-                                .padding(.horizontal)
-                        }
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        .background(Color(.systemGroupedBackground))
-                        .onTapGesture {
-                            withAnimation(.easeInOut(duration: 0.3)) {
-                                showingWelcome = false
-                            }
-                        }
-                    } else {
-                        VStack(spacing: 30) {
-                            // Category badge (if available)
-                            if let category = factsService.currentFact?.category {
-                                Text(category.uppercased())
-                                    .font(.caption)
-                                    .fontWeight(.semibold)
-                                    .foregroundColor(.white)
-                                    .padding(.horizontal, 12)
-                                    .padding(.vertical, 6)
-                                    .background(Color.blue)
-                                    .clipShape(Capsule())
-                            }
-                            
-                            // Main fact text
-                            if let fact = factsService.currentFact {
-                                Text(fact.text)
-                                    .font(.title2)
-                                    .fontWeight(.medium)
-                                    .lineSpacing(8)
-                                    .multilineTextAlignment(.center)
-                                    .padding(.horizontal, 20)
-                                    .foregroundColor(.primary)
-                            }
-                            
-                            // Instruction text
-                            Text("Trykk for neste fakta")
-                                .font(.caption)
-                                .foregroundColor(.secondary)
-                                .padding(.top, 20)
-                        }
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        .background(
-                            LinearGradient(
-                                gradient: Gradient(colors: [
-                                    Color.blue.opacity(0.05),
-                                    Color.cyan.opacity(0.05)
-                                ]),
-                                startPoint: .topLeading,
-                                endPoint: .bottomTrailing
-                            )
-                        )
-                        .onTapGesture {
-                            withAnimation(.easeInOut(duration: 0.5)) {
-                                factsService.showRandomFact()
-                            }
+        GeometryReader { geometry in
+            VStack(spacing: 0) {
+                if showingWelcome {
+                    VStack(spacing: 20) {
+                        Image(systemName: "book.circle.fill")
+                            .font(.system(size: 80))
+                            .foregroundColor(.blue)
+                        
+                        Text("Bergen Fakta")
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                        
+                        Text("Trykk hvor som helst for å lære noe nytt om Bergen!")
+                            .font(.body)
+                            .foregroundColor(.secondary)
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal)
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color(.systemGroupedBackground))
+                    .onTapGesture {
+                        withAnimation(.easeInOut(duration: 0.3)) {
+                            showingWelcome = false
+                            // Play Grieg's Morning when entering facts
+                            audioService.playMorningMusic()
                         }
                     }
+                } else {
+                    // Full screen layout with overlay text
+                    ZStack {
+                        // Full bleed background image (respecting tab bar safe area)
+                        if let fact = factsService.currentFact {
+                            if UIImage(named: fact.imageName) != nil {
+                                Image(fact.imageName)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: geometry.size.width, height: geometry.size.height - geometry.safeAreaInsets.bottom)
+                                    .clipped()
+                            } else {
+                                // Fallback gradient background
+                                LinearGradient(
+                                    gradient: Gradient(colors: [Color.blue.opacity(0.6), Color.purple.opacity(0.4)]),
+                                    startPoint: .topLeading,
+                                    endPoint: .bottomTrailing
+                                )
+                                .frame(width: geometry.size.width, height: geometry.size.height - geometry.safeAreaInsets.bottom)
+                            }
+                        }
+                        
+                        // Floating text box positioned in top 1/3
+                        VStack {
+                            if let fact = factsService.currentFact {
+                                ZStack(alignment: .bottomTrailing) {
+                                    Text(fact.text)
+                                        .font(.system(size: 18, weight: .medium, design: .rounded))
+                                        .lineSpacing(6)
+                                        .multilineTextAlignment(.center)
+                                        .foregroundColor(.white)
+                                        .padding(.horizontal, 24)
+                                        .padding(.vertical, 20)
+                                        .background(
+                                            RoundedRectangle(cornerRadius: 16)
+                                                .fill(.ultraThinMaterial.opacity(0.8))
+                                                .overlay(
+                                                    RoundedRectangle(cornerRadius: 16)
+                                                        .fill(Color.black.opacity(0.6))
+                                                )
+                                                .shadow(color: .black.opacity(0.3), radius: 12, x: 0, y: 4)
+                                        )
+                                    
+                                    // Touch icon in lower right corner with subtle animations
+                                    Image(systemName: "hand.tap.fill")
+                                        .font(.system(size: 14, weight: .medium))
+                                        .foregroundColor(.white.opacity(iconOpacity))
+                                        .padding(6)
+                                        .background(
+                                            Circle()
+                                                .fill(Color.black.opacity(0.2))
+                                        )
+                                        .scaleEffect(iconScale)
+                                        .offset(x: -6, y: -6)
+                                }
+                                .padding(.horizontal, 32)
+                            }
+                            
+                            Spacer()
+                        }
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .padding(.top, geometry.size.height * 0.2) // More top margin
+                        .onAppear {
+                            startHintTimer()
+                        }
+                        .onDisappear {
+                            stopHintTimer()
+                        }
+                    }
+                    .onTapGesture {
+                        withAnimation(.easeInOut(duration: 0.5)) {
+                            factsService.showRandomFact()
+                        }
+                        resetHintTimer()
+                    }
                 }
-                .navigationTitle("Fakta")
-                .navigationBarTitleDisplayMode(.inline)
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .ignoresSafeArea(.container, edges: .top)
+        }
+    }
+    
+    // MARK: - Helper Functions
+    
+    private func startHintTimer() {
+        stopHintTimer()
+        hintTimer = Timer.scheduledTimer(withTimeInterval: 30.0, repeats: true) { _ in
+            performHintAnimation()
+        }
+    }
+    
+    private func stopHintTimer() {
+        hintTimer?.invalidate()
+        hintTimer = nil
+    }
+    
+    private func resetHintTimer() {
+        stopHintTimer()
+        startHintTimer()
+    }
+    
+    private func performHintAnimation() {
+        // Perform 3 subtle tap animations
+        for i in 0..<3 {
+            DispatchQueue.main.asyncAfter(deadline: .now() + Double(i) * 0.4) {
+                withAnimation(.easeInOut(duration: 0.2)) {
+                    iconOpacity = 1.0
+                    iconScale = 0.8
+                }
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                    withAnimation(.easeInOut(duration: 0.2)) {
+                        iconOpacity = 0.6
+                        iconScale = 1.0
+                    }
+                }
             }
         }
     }
@@ -89,4 +159,5 @@ struct FaktaView: View {
 
 #Preview {
     FaktaView()
+        .environmentObject(AudioService())
 }

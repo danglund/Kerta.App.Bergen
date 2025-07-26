@@ -1,0 +1,74 @@
+{
+  "grieg-morning": {
+    "id": "grieg-morning",
+    "title": "Morning Mood",
+    "composer": "Edvard Grieg",
+    "filename": "grieg-morning.mp3",
+    "duration": 240.0,
+    "year": 1875,
+    "description": "From Peer Gynt Suite No. 1, Op. 46"
+  },
+  "grieg-mountain-king": {
+    "id": "grieg-mountain-king",
+    "title": "In the Hall of the Mountain King",
+    "composer": "Edvard Grieg",
+    "filename": "grieg-mountain-king.mp3",
+    "duration": 150.0,
+    "year": 1875,
+    "description": "From Peer Gynt Suite No. 1, Op. 46"
+  },
+  "Classicals.de - Grieg - Peer Gynt Suite No. 1, Op. 46 - I. Morning": {
+    "id": "grieg-morning-full",
+    "title": "Morning Mood (Full Version)",
+    "composer": "Edvard Grieg",
+    "filename": "Classicals.de - Grieg - Peer Gynt Suite No. 1, Op. 46 - I. Morning.mp3",
+    "duration": 270.0,
+    "year": 1875,
+    "description": "Peer Gynt Suite No. 1, Op. 46 - I. Morning"
+  },
+  "Classicals.de - Grieg - Peer Gynt Suite No. 1, Op. 46 - II. Aase's Death": {
+    "id": "grieg-aases-death",
+    "title": "Åse's Death",
+    "composer": "Edvard Grieg",
+    "filename": "Classicals.de - Grieg - Peer Gynt Suite No. 1, Op. 46 - II. Aase's Death.mp3",
+    "duration": 300.0,
+    "year": 1875,
+    "description": "Peer Gynt Suite No. 1, Op. 46 - II. Åse's Death"
+  },
+  "Classicals.de - Grieg - Peer Gynt Suite No. 1, Op. 46 - III. Anitra's Dream": {
+    "id": "grieg-anitras-dream",
+    "title": "Anitra's Dream",
+    "composer": "Edvard Grieg",
+    "filename": "Classicals.de - Grieg - Peer Gynt Suite No. 1, Op. 46 - III. Anitra's Dream.mp3",
+    "duration": 180.0,
+    "year": 1875,
+    "description": "Peer Gynt Suite No. 1, Op. 46 - III. Anitra's Dream"
+  },
+  "Classicals.de - Grieg - Peer Gynt Suite No. 1, Op. 46 - IV. In the Hall Of The Mountain King": {
+    "id": "grieg-mountain-king-full",
+    "title": "In the Hall of the Mountain King (Full Version)",
+    "composer": "Edvard Grieg",
+    "filename": "Classicals.de - Grieg - Peer Gynt Suite No. 1, Op. 46 - IV. In the Hall Of The Mountain King.mp3",
+    "duration": 165.0,
+    "year": 1875,
+    "description": "Peer Gynt Suite No. 1, Op. 46 - IV. In the Hall of the Mountain King"
+  },
+  "Classicals.de-Grieg-In-the-Hall-of-the-Mountain-King-Peer-Gynt-Suite-Short-Version-Arranged-for-Music-Box": {
+    "id": "grieg-mountain-king-music-box",
+    "title": "In the Hall of the Mountain King (Music Box)",
+    "composer": "Edvard Grieg",
+    "filename": "Classicals.de-Grieg-In-the-Hall-of-the-Mountain-King-Peer-Gynt-Suite-Short-Version-Arranged-for-Music-Box.mp3",
+    "duration": 90.0,
+    "year": 1875,
+    "description": "Arranged for Music Box - Short Version"
+  },
+  "Classicals.de-Grieg-Morning-Mood-Peer-Gynt-Suite-No.1,-Op.46-Arranged-for-Piano": {
+    "id": "grieg-morning-piano",
+    "title": "Morning Mood (Piano Arrangement)",
+    "composer": "Edvard Grieg",
+    "filename": "Classicals.de-Grieg-Morning-Mood-Peer-Gynt-Suite-No.1,-Op.46-Arranged-for-Piano.mp3",
+    "duration": 240.0,
+    "year": 1875,
+    "description": "Arranged for Piano Solo"
+  }
+}

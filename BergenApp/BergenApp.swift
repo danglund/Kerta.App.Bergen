@@ -10,28 +10,91 @@ struct BergenApp: App {
 }
 
 struct ContentView: View {
+    @StateObject private var audioService = AudioService()
+    @State private var selectedTab: Int = 0
+    
     var body: some View {
-        TabView {
-            BergenButtonView()
-                .tabItem {
-                    Label("Bergen!", systemImage: "speaker.wave.3.fill")
+        GeometryReader { geometry in
+            ZStack(alignment: .bottom) {
+                // Main TabView - stays in place
+                TabView(selection: $selectedTab) {
+                    BergenButtonView()
+                        .environmentObject(audioService)
+                        .tabItem {
+                            Label("Bergen!", systemImage: "speaker.wave.3.fill")
+                        }
+                        .tag(0)
+                    
+                    KartView()
+                        .environmentObject(audioService)
+                        .tabItem {
+                            Label("Kart", systemImage: "map.fill")
+                        }
+                        .tag(1)
+                    
+                    FaktaView()
+                        .environmentObject(audioService)
+                        .tabItem {
+                            Label("Fakta", systemImage: "book.fill")
+                        }
+                        .tag(2)
+                    
+                    MerView()
+                        .environmentObject(audioService)
+                        .tabItem {
+                            Label("Mer", systemImage: "ellipsis.circle.fill")
+                        }
+                        .tag(3)
                 }
-            
-            KartView()
-                .tabItem {
-                    Label("Kart", systemImage: "map.fill")
+                .accentColor(.blue)
+                
+                // Music player panel - appears directly above tab bar
+                if audioService.isPlaying {
+                    VStack(spacing: 0) {
+                        Spacer()
+                        MusicPlayerPanel(audioService: audioService)
+                    }
+                    .padding(.bottom, geometry.safeAreaInsets.bottom + 49) // Tab bar height + safe area
+                    .transition(.asymmetric(
+                        insertion: .move(edge: .bottom).combined(with: .opacity),
+                        removal: .move(edge: .bottom).combined(with: .opacity)
+                    ))
+                    .animation(.spring(response: 0.4, dampingFraction: 0.8), value: audioService.isPlaying)
+                    .allowsHitTesting(true)
                 }
-            
-            FaktaView()
-                .tabItem {
-                    Label("Fakta", systemImage: "book.fill")
-                }
-            
-            MerView()
-                .tabItem {
-                    Label("Mer", systemImage: "ellipsis.circle.fill")
-                }
+            }
         }
-        .accentColor(.blue)
+        .onOpenURL { url in
+            handleDeepLink(url)
+        }
+    }
+    
+    private func handleDeepLink(_ url: URL) {
+        print("🔗 Received deep link: \(url)")
+        
+        // Handle different URL schemes: bergen://tab/fakta, bergen://tab/kart, etc.
+        guard url.scheme == "bergen" else {
+            print("❌ Unknown URL scheme: \(url.scheme ?? "nil")")
+            return
+        }
+        
+        let path = url.path.lowercased()
+        
+        switch path {
+        case "/bergen", "/button":
+            selectedTab = 0
+            print("📍 Navigated to Bergen Button")
+        case "/kart", "/map":
+            selectedTab = 1
+            print("📍 Navigated to Kart")
+        case "/fakta", "/facts":
+            selectedTab = 2
+            print("📍 Navigated to Fakta")
+        case "/mer", "/more":
+            selectedTab = 3
+            print("📍 Navigated to Mer")
+        default:
+            print("❌ Unknown deep link path: \(path)")
+        }
     }
 }
