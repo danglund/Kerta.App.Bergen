@@ -107,15 +107,15 @@ struct ContentView: View {
                 .accentColor(.blue)
                 .onChange(of: selectedTab) { newValue in
                     // Stop music when navigating away from Fakta tab (tab 2)
-                    // Note: We check if current playing state and new tab is not Fakta
-                    if audioService.isPlaying && newValue != 2 {
+                    // Stop music if there's a current track and we're not on Fakta tab
+                    if audioService.currentTrack != nil && newValue != 2 {
                         audioService.stopAudio()
                         print("🎵 Stopped music when leaving Fakta tab")
                     }
                 }
                 
-                // Music player panel - appears directly above tab bar
-                if audioService.isPlaying {
+                // Music player panel - appears directly above tab bar when there's a track (playing or paused)
+                if audioService.currentTrack != nil {
                     VStack(spacing: 0) {
                         Spacer()
                         SimpleMusicPlayerPanel(audioService: audioService)
@@ -125,7 +125,7 @@ struct ContentView: View {
                         insertion: .move(edge: .bottom).combined(with: .opacity),
                         removal: .move(edge: .bottom).combined(with: .opacity)
                     ))
-                    .animation(.spring(response: 0.4, dampingFraction: 0.8), value: audioService.isPlaying)
+                    .animation(.spring(response: 0.4, dampingFraction: 0.8), value: audioService.currentTrack?.id)
                     .allowsHitTesting(true)
                 }
             }
