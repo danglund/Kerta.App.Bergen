@@ -20,7 +20,7 @@ struct MerView: View {
     
     private let features: [FeatureItem] = [
         FeatureItem(
-            title: "Bergen været",
+            title: "Vêret",
             description: "Værmelding med ekte bergensk personlighet",
             icon: "cloud.rain",
             status: .available
@@ -83,7 +83,7 @@ struct MerView: View {
             .navigationTitle("Mer")
             .navigationDestination(for: String.self) { destination in
                 switch destination {
-                case "Bergen været":
+                case "Vêret":
                     WeatherView()
                 default:
                     Text("Feature kommer snart")

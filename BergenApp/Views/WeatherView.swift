@@ -1,96 +1,231 @@
 import SwiftUI
 
 struct WeatherView: View {
-    @StateObject private var rainProvider = BergenRainStatsProvider()
+    @StateObject private var fakeProvider = FakeBergenWeatherProvider()
+    @StateObject private var realProvider = YrNoWeatherProvider()
+    @StateObject private var complaintService = NewspaperComplaintService()
     @State private var showingShareSheet = false
     @State private var shareText = ""
+    @State private var showingRealWeather = false
+    @State private var weatherMessage = ""
+    @State private var showingComplaintView = false
+    
+    // Current weather state (initially from fake provider, then real weather)
+    private var currentProvider: any RainCheckProvider {
+        showingRealWeather ? realProvider : fakeProvider
+    }
+    
+    private var isRainy: Bool {
+        currentProvider.isRainy
+    }
     
     var body: some View {
         ZStack {
             // Background color based on weather
-            (rainProvider.isRainy ? Color.gray : Color.blue)
+            (isRainy ? Color.gray : Color.blue)
                 .opacity(0.1)
                 .ignoresSafeArea()
             
-            VStack(spacing: 40) {
-                Spacer()
-                
-                // Weather icon
-                Image(systemName: rainProvider.isRainy ? "umbrella.fill" : "sun.max.fill")
-                    .font(.system(size: 120))
-                    .foregroundColor(rainProvider.isRainy ? .gray : .orange)
-                    .scaleEffect(rainProvider.isRainy ? 1.0 : 1.2)
-                    .animation(.easeInOut(duration: 0.5), value: rainProvider.isRainy)
-                
-                // Weather message
-                Text(rainProvider.isRainy ? "Ja, det regnar.\nAlt er som vanleg." : "NEI!\nSola skin i Bergen!")
-                    .font(.system(size: 28, weight: .bold, design: .rounded))
-                    .multilineTextAlignment(.center)
-                    .foregroundColor(rainProvider.isRainy ? .secondary : .primary)
-                    .animation(.easeInOut(duration: 0.3), value: rainProvider.isRainy)
-                
-                // Share buttons (only when sunny)
-                if !rainProvider.isRainy {
-                    VStack(spacing: 16) {
-                        Button(action: {
-                            shareText = "Sola skin i Bergen i dag. Tenk på det, du!"
-                            showingShareSheet = true
-                        }) {
-                            HStack {
-                                Image(systemName: "sun.max.fill")
-                                Text("Del med alle Østlendingar")
+            ScrollView {
+                VStack(spacing: 30) {
+                    Spacer()
+                    
+                    // Weather icon (default to rain, then show real weather)
+                    Image(systemName: showingRealWeather ? (isRainy ? "umbrella.fill" : "sun.max.fill") : "umbrella.fill")
+                        .font(.system(size: 100))
+                        .foregroundColor(showingRealWeather ? (isRainy ? .gray : .orange) : .gray)
+                    
+                    // Weather message (spinner text while loading, then real weather)
+                    Text(getWeatherMessage())
+                        .font(.system(size: 24, weight: .bold, design: .rounded))
+                        .multilineTextAlignment(.center)
+                        .foregroundColor(showingRealWeather ? (isRainy ? .secondary : .primary) : .secondary)
+                    
+                    // Weather details (show real data when available and showing real weather)
+                    if showingRealWeather, let weatherData = realProvider.weatherData {
+                        VStack(spacing: 16) {
+                            // Temperature info
+                            VStack(spacing: 8) {
+                                HStack {
+                                    Text("I dag:")
+                                        .font(.headline)
+                                    Spacer()
+                                    Text("\(String(format: "%.1f", weatherData.currentTemperature))°C")
+                                        .font(.title2)
+                                        .fontWeight(.semibold)
+                                }
+                                
+                                HStack {
+                                    Text("I måren:")  // Bergen dialect for "tomorrow"
+                                        .font(.headline)
+                                    Spacer()
+                                    Text("\(String(format: "%.1f", weatherData.tomorrowTemperature))°C")
+                                        .font(.title2)
+                                        .fontWeight(.semibold)
+                                }
                             }
-                            .font(.headline)
-                            .foregroundColor(.white)
                             .padding()
-                            .background(Color.orange)
+                            .background(Color.secondary.opacity(0.1))
                             .cornerRadius(12)
-                        }
-                        
-                        Button(action: {
-                            shareText = "Østlendingar brif med sol – men vi har sol vi òg! #BergenSkins"
-                            showingShareSheet = true
-                        }) {
+                            
+                            // Sun times - sunrise on left, sunset on right
                             HStack {
-                                Image(systemName: "flame.fill")
-                                Text("Post på X")
+                                // Sunrise on left
+                                VStack(spacing: 4) {
+                                    Image(systemName: "sunrise.fill")
+                                        .foregroundColor(.orange)
+                                        .font(.title2)
+                                    Text(weatherData.sunriseTime, format: .dateTime.hour().minute())
+                                        .font(.title2)
+                                        .fontWeight(.semibold)
+                                }
+                                
+                                Spacer()
+                                
+                                // Sunset on right
+                                VStack(spacing: 4) {
+                                    Image(systemName: "sunset.fill")
+                                        .foregroundColor(.red)
+                                        .font(.title2)
+                                    Text(weatherData.sunsetTime, format: .dateTime.hour().minute())
+                                        .font(.title2)
+                                        .fontWeight(.semibold)
+                                }
                             }
-                            .font(.headline)
-                            .foregroundColor(.white)
                             .padding()
-                            .background(Color.red)
+                            .background(Color.secondary.opacity(0.1))
                             .cornerRadius(12)
                         }
                     }
-                    .transition(.scale.combined(with: .opacity))
-                    .animation(.spring(response: 0.6, dampingFraction: 0.8), value: rainProvider.isRainy)
+                    
+                    // Action buttons (only when real weather is confirmed)
+                    if showingRealWeather {
+                        VStack(spacing: 16) {
+                            // Complaint button - always first
+                            Button(action: {
+                                complaintService.updateWeather(isRainy: realProvider.isRainy)
+                                showingComplaintView = true
+                            }) {
+                                HStack {
+                                    Image(systemName: "envelope.fill")
+                                    Text("Klag til avisen")
+                                }
+                                .font(.headline)
+                                .foregroundColor(.white)
+                                .padding()
+                                .frame(maxWidth: .infinity)
+                                .background(realProvider.isRainy ? Color.blue : Color.orange)
+                                .cornerRadius(12)
+                            }
+                            
+                            // Share buttons for sunny weather
+                            if !realProvider.isRainy {
+                                Button(action: {
+                                    shareText = "Sola skin i Bergen i dag. Tenk på det, du!"
+                                    showingShareSheet = true
+                                }) {
+                                    HStack {
+                                        Image(systemName: "sun.max.fill")
+                                        Text("Del med alle Østlendingar")
+                                    }
+                                    .font(.headline)
+                                    .foregroundColor(.white)
+                                    .padding()
+                                    .frame(maxWidth: .infinity)
+                                    .background(Color.orange)
+                                    .cornerRadius(12)
+                                }
+                                
+                                Button(action: {
+                                    shareText = "Østlendingar brif med sol – men vi har sol vi òg! #BergenSkins"
+                                    showingShareSheet = true
+                                }) {
+                                    HStack {
+                                        Image(systemName: "flame.fill")
+                                        Text("Post på X")
+                                    }
+                                    .font(.headline)
+                                    .foregroundColor(.white)
+                                    .padding()
+                                    .frame(maxWidth: .infinity)
+                                    .background(Color.red)
+                                    .cornerRadius(12)
+                                }
+                            }
+                        }
+                    }
+                    
+                    Spacer()
                 }
-                
-                Spacer()
-                
-                // Check again button
-                Button("Sjekk igjen") {
-                    rainProvider.checkWeather()
-                }
-                .font(.title2)
-                .fontWeight(.semibold)
-                .foregroundColor(.blue)
-                .padding(.horizontal, 32)
-                .padding(.vertical, 12)
-                .background(Color.blue.opacity(0.1))
-                .cornerRadius(25)
-                
-                Spacer()
+                .padding()
             }
-            .padding()
         }
-        .navigationTitle("Bergen Vær")
+        .navigationTitle("Vêret")
         .navigationBarTitleDisplayMode(.inline)
         .sheet(isPresented: $showingShareSheet) {
             ActivityView(activityItems: [shareText])
         }
+        .sheet(isPresented: $showingComplaintView) {
+            ComplaintPreviewView(complaintService: complaintService)
+        }
         .onAppear {
-            rainProvider.checkWeather()
+            startWeatherSequence()
+        }
+    }
+    
+    // MARK: - Funny Weather Timing Functions
+    
+    private func startWeatherSequence() {
+        // Reset to show fake weather first
+        showingRealWeather = false
+        
+        // Start the fake provider
+        fakeProvider.checkWeather()
+        
+        // Start real weather fetch in background
+        realProvider.checkWeather()
+        
+        // Wait 3-5 seconds before switching to real weather
+        let delay = Double.random(in: 3.0...5.0)
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+            withAnimation(.easeInOut(duration: 0.8)) {
+                showingRealWeather = true
+            }
+        }
+    }
+    
+    private func checkWeatherWithFunnyTiming() {
+        // Reset to fake weather first for the funny effect
+        withAnimation(.easeInOut(duration: 0.5)) {
+            showingRealWeather = false
+        }
+        
+        // Check fake weather immediately
+        fakeProvider.checkWeather()
+        
+        // Check real weather in background
+        realProvider.checkWeather()
+        
+        // Wait 3-5 seconds before revealing real weather
+        let delay = Double.random(in: 3.0...5.0)
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+            withAnimation(.easeInOut(duration: 0.8)) {
+                showingRealWeather = true
+            }
+        }
+    }
+    
+    private func getWeatherMessage() -> String {
+        if !showingRealWeather {
+            // Simple loading message
+            return "Hentar vêrdata..."
+        } else {
+            // Simple weather status
+            if realProvider.isRainy {
+                return "Det regnar i Bergen"
+            } else {
+                return "Sola skin i Bergen!"
+            }
         }
     }
 }

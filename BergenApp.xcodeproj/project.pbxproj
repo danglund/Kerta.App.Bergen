@@ -28,6 +28,11 @@
 		A1234567890123456789013K /* grieg-mountain-king.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A1234567890123456789013L /* grieg-mountain-king.mp3 */; };
 		E11AF9D70D3F45D4B843CA78 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEC4C8E97AE405993DB5F02 /* WeatherView.swift */; };
 		2B9729723C714DC180E95987 /* RainCheckProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5E379F4114433D82C03888 /* RainCheckProvider.swift */; };
+		A1234567890123456789014A /* newspaper-complaints.json in Resources */ = {isa = PBXBuildFile; fileRef = A1234567890123456789014B /* newspaper-complaints.json */; };
+		A1234567890123456789014C /* newspapers.json in Resources */ = {isa = PBXBuildFile; fileRef = A1234567890123456789014D /* newspapers.json */; };
+		A1234567890123456789014E /* NewspaperComplaintService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1234567890123456789014F /* NewspaperComplaintService.swift */; };
+		A1234567890123456789014G /* NewspaperComplaintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1234567890123456789014H /* NewspaperComplaintView.swift */; };
+		A1234567890123456789014I /* ComplaintPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1234567890123456789014J /* ComplaintPreviewView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +58,11 @@
 		A1234567890123456789013L /* grieg-mountain-king.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "grieg-mountain-king.mp3"; sourceTree = "<group>"; };
 		FEEC4C8E97AE405993DB5F02 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		7A5E379F4114433D82C03888 /* RainCheckProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainCheckProvider.swift; sourceTree = "<group>"; };
+		A1234567890123456789014B /* newspaper-complaints.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "newspaper-complaints.json"; sourceTree = "<group>"; };
+		A1234567890123456789014D /* newspapers.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "newspapers.json"; sourceTree = "<group>"; };
+		A1234567890123456789014F /* NewspaperComplaintService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewspaperComplaintService.swift; sourceTree = "<group>"; };
+		A1234567890123456789014H /* NewspaperComplaintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewspaperComplaintView.swift; sourceTree = "<group>"; };
+		A1234567890123456789014J /* ComplaintPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplaintPreviewView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +113,8 @@
 				A1234567890123456789012H /* FaktaView.swift */,
 				A1234567890123456789012J /* MerView.swift */,
 				FEEC4C8E97AE405993DB5F02 /* WeatherView.swift */,
+				A1234567890123456789014H /* NewspaperComplaintView.swift */,
+				A1234567890123456789014J /* ComplaintPreviewView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -113,6 +125,7 @@
 				A1234567890123456789012L /* AudioService.swift */,
 				A1234567890123456789012N /* LocationService.swift */,
 				7A5E379F4114433D82C03888 /* RainCheckProvider.swift */,
+				A1234567890123456789014F /* NewspaperComplaintService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -129,6 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				A1234567890123456789012T /* bergen-facts.json */,
+				A1234567890123456789014B /* newspaper-complaints.json */,
+				A1234567890123456789014D /* newspapers.json */,
 				A1234567890123456789011J /* Audio */,
 			);
 			path = Resources;
@@ -210,6 +225,8 @@
 			files = (
 				A1234567890123456789012Q /* Assets.xcassets in Resources */,
 				A1234567890123456789012S /* bergen-facts.json in Resources */,
+				A1234567890123456789014A /* newspaper-complaints.json in Resources */,
+				A1234567890123456789014C /* newspapers.json in Resources */,
 				A1234567890123456789012U /* Bergen1.mp3 in Resources */,
 				A1234567890123456789012W /* Bergen2.mp3 in Resources */,
 				A1234567890123456789012Y /* Bergen3.mp3 in Resources */,
@@ -239,6 +256,9 @@
 				A1234567890123456789012O /* BergenFact.swift in Sources */,
 				E11AF9D70D3F45D4B843CA78 /* WeatherView.swift in Sources */,
 				2B9729723C714DC180E95987 /* RainCheckProvider.swift in Sources */,
+				A1234567890123456789014E /* NewspaperComplaintService.swift in Sources */,
+				A1234567890123456789014G /* NewspaperComplaintView.swift in Sources */,
+				A1234567890123456789014I /* ComplaintPreviewView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

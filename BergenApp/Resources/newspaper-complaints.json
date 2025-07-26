@@ -1,0 +1,50 @@
+{
+  "templates": [
+    {
+      "id": "angry-sunny-weather",
+      "title": "Surt om mangel på solnyheiter",
+      "category": "humor",
+      "characters": 1114,
+      "length": "medium",
+      "topic": "weather",
+      "weather": "sunny",
+      "sentiment": "angry",
+      "text": "Ka i svarte helsikken e det med [NewsPaper]-redaksjonen?! No sit eg her på altanen i Sandviken med ein lunken Hansa i neven, og trur du ikkje sola faktisk skinn! Eg måtte blinka to gonga før eg skjønte det ikkje va refleksjon frå bossspannet. Men kor e [NewsPaper]? E det bilder av smilande bergensarar i solsteiken på forsida? NEI! Ikkje eitt ord! Men med ein gong det e 28 gradar i Asker og nokre Østlænningar slenger rævo i Akerselva, då smell det med heile 14 saker om is, baris og \"sommerlykke\". Vi i Bergen får knapt ein pushvarsel når vi går tørrskodde over Torgallmenningen!\n\nEg skjønne det godt, dokkar i [NewsPaper] sitt jo der inne på det derre dvaske Østlandet og trur Noreg slutta etter Drammen. Men me her i Bergen har faktisk lært oss å elska regnet – me dyrka det, bada i det, me KLER oss i det. Og når sola først titta fram, e det som å få helgefølelsen og 17. mai på same tid. Men det bryr ikkje [NewsPaper] seg om. Kanskje dokkar rett og slett e redde for at me ser betre ut i sollys? Kanskje dokkar ikkje tåle tanken på at Bergen i sol e vakrare enn heile Oslo vest til saman? Skjerp dokkar, [NewsPaper]. Me eksistera, me skinn – og me har sol i dag. *Så då får dokkar skriva om det, jævla østlænningar.*",
+      "placeholders": {
+        "NewsPaper": {
+          "description": "Name of the newspaper, for example VG",
+          "example": "VG"
+        }
+      }
+    },
+    {
+      "id": "defensive-rainy-weather",
+      "title": "I forsvar av bergensregnet",
+      "category": "humor",
+      "characters": 987,
+      "length": "medium",
+      "topic": "weather",
+      "weather": "rainy",
+      "sentiment": "defensive",
+      "text": "Kjære [NewsPaper], no må dokkar skjerpa dokkar! Eg sit her og les den eine artikkelen etter den andre om kor \"forferdelig\" vêret e i Bergen. Det regnar, og då e det som om dokkar trur me alle går rundt og klagar som nokre sure tullingar. Men her e nyheita, [NewsPaper]: Me ELSKAR regnet vårt!\n\nRegnet i Bergen e ikkje berre regn – det e musikk på taket, det e dusjen som får alt til å lukte ferskt, det e grunnen til at me har den grønaste byen i Noreg. Medan dokkar på Østlandet sit og klagar over tre dråpar, har me lært oss å finna skjønnhet i kvar einaste regnskur. Me har dei beste regnjakka, dei finaste paraplya, og me kan gå i regn utan å verta sure – det e ein superkraft!\n\nOg når dokkar skriv om \"det ekstreme regnvêret i Bergen\", då gløymer dokkar å nemna at me faktisk har fleire museum, betre kafé-kultur og meir kultur per kvadratmeter enn nokon annan by i landet. Regnet gjer oss kreative, regnet gjer oss sterke, og regnet gjer Bergen til Bergen. Så slutt å skriv om regnet vårt som om det e ein katastrofe – det e vårt livseleksir! *Me treng ikkje medkjensle, me treng respekt for regnkunst.*",
+      "placeholders": {
+        "NewsPaper": {
+          "description": "Name of the newspaper, for example VG",
+          "example": "VG"
+        }
+      }
+    },
+    {
+      "id": "humorous-rain-commentary",
+      "title": "Meteorologar og mediekaos",
+      "category": "weather commentary",
+      "characters": 952,
+      "length": "medium",
+      "topic": "weather",
+      "weather": "rainy",
+      "sentiment": "humorous",
+      "text": "Ka e det me meteorologane eigentleg? Først melde dei sol heile veka, og no står dei der med paraply og beklaga seg som om me ikkje visste betre. I Bergen kan me lesa skyene som gamle tanter les kaffigrut – og me visste jo at det kom til å regna! Men når det regna på Vestlandet, då kallar dei det \"vêromslag\", medan ein liten regndråpe på Aker Brygge blir kalla \"ekstremvêr\" og får eige varslingssystem og pressetekning.\n\nEg sto nettopp og helte vatn ut av skoen på Danmarksplass, og det var nesten litt rørande – ikkje fordi det va uventa, men fordi det kjennast som heime. Regnet e vår identitet, vår parfymé, vår nasjonalsang. Men det får jo ikkje media med seg, dei står fortsatt og filma ein søledam i Bærum som om det va starten på syndfloden. Ta dokkar ein tur vestover neste gong, så skal dokkar få sjå ekte regn – ikkje den derre premenstruelle dusjen Østlandet klagar på.",
+      "placeholders": {}
+    }
+  ]
+}

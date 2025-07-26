@@ -1,0 +1,36 @@
+{
+  "newspapers": [
+    {
+      "id": "vg",
+      "name": "VG",
+      "fullName": "Verdens Gang",
+      "type": "national",
+      "email": "kontakt@vg.no",
+      "website": "vg.no"
+    },
+    {
+      "id": "dagbladet",
+      "name": "Dagbladet",
+      "fullName": "Dagbladet",
+      "type": "national",
+      "email": "kontakt@db.no",
+      "website": "dagbladet.no"
+    },
+    {
+      "id": "aftenposten",
+      "name": "Aftenposten",
+      "fullName": "Aftenposten",
+      "type": "national",
+      "email": "kontakt@ap.no",
+      "website": "aftenposten.no"
+    },
+    {
+      "id": "nrk",
+      "name": "NRK",
+      "fullName": "NRK Nyheter",
+      "type": "public",
+      "email": "kontakt@nrk.no",
+      "website": "nrk.no"
+    }
+  ]
+}
