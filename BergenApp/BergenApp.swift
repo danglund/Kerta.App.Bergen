@@ -91,25 +91,32 @@ struct ContentView: View {
                         }
                         .tag(1)
                     
+                    BergenOrdView()
+                        .environmentObject(audioService)
+                        .tabItem {
+                            Label("Bergen ord", systemImage: "text.bubble")
+                        }
+                        .tag(2)
+                    
                     FaktaView()
                         .environmentObject(audioService)
                         .tabItem {
                             Label("Fakta", systemImage: "book.fill")
                         }
-                        .tag(2)
+                        .tag(3)
                     
                     MerView()
                         .environmentObject(audioService)
                         .tabItem {
                             Label("Mer", systemImage: "ellipsis.circle.fill")
                         }
-                        .tag(3)
+                        .tag(4)
                 }
                 .accentColor(.blue)
                 .onChange(of: selectedTab) { newValue in
-                    // Stop music when navigating away from Fakta tab (tab 2)
+                    // Stop music when navigating away from Fakta tab (tab 3)
                     // Note: We check if current playing state and new tab is not Fakta
-                    if audioService.isPlaying && newValue != 2 {
+                    if audioService.isPlaying && newValue != 3 {
                         audioService.stopAudio()
                         print("🎵 Stopped music when leaving Fakta tab")
                     }
@@ -154,11 +161,14 @@ struct ContentView: View {
         case "/kart", "/map":
             selectedTab = 1
             print("📍 Navigated to Kart")
-        case "/fakta", "/facts":
+        case "/bergen-ord", "/words":
             selectedTab = 2
+            print("📍 Navigated to Bergen ord")
+        case "/fakta", "/facts":
+            selectedTab = 3
             print("📍 Navigated to Fakta")
         case "/mer", "/more":
-            selectedTab = 3
+            selectedTab = 4
             print("📍 Navigated to Mer")
         default:
             print("❌ Unknown deep link path: \(path)")

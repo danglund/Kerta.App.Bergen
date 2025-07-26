@@ -26,6 +26,7 @@
 		A1234567890123456789013G /* Bergen7.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A1234567890123456789013H /* Bergen7.m4a */; };
 		E11AF9D70D3F45D4B843CA78 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEC4C8E97AE405993DB5F02 /* WeatherView.swift */; };
 		2B9729723C714DC180E95987 /* RainCheckProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5E379F4114433D82C03888 /* RainCheckProvider.swift */; };
+		74513EF0F94549DF8F66994C /* BergenOrdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5095EE71365F4B6CAFF59C0A /* BergenOrdView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		A1234567890123456789013H /* Bergen7.m4a */ = {isa = PBXFileReference; lastKnownFileType = audio.m4a; path = Bergen7.m4a; sourceTree = "<group>"; };
 		FEEC4C8E97AE405993DB5F02 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		7A5E379F4114433D82C03888 /* RainCheckProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainCheckProvider.swift; sourceTree = "<group>"; };
+		5095EE71365F4B6CAFF59C0A /* BergenOrdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BergenOrdView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				A1234567890123456789012D /* BergenButtonView.swift */,
 				A1234567890123456789012F /* KartView.swift */,
+				5095EE71365F4B6CAFF59C0A /* BergenOrdView.swift */,
 				A1234567890123456789012H /* FaktaView.swift */,
 				A1234567890123456789012J /* MerView.swift */,
 				FEEC4C8E97AE405993DB5F02 /* WeatherView.swift */,
@@ -224,6 +227,7 @@
 				A1234567890123456789012A /* BergenApp.swift in Sources */,
 				A1234567890123456789012C /* BergenButtonView.swift in Sources */,
 				A1234567890123456789012E /* KartView.swift in Sources */,
+				74513EF0F94549DF8F66994C /* BergenOrdView.swift in Sources */,
 				A1234567890123456789012G /* FaktaView.swift in Sources */,
 				A1234567890123456789012I /* MerView.swift in Sources */,
 				A1234567890123456789012K /* AudioService.swift in Sources */,
