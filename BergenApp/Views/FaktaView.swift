@@ -6,6 +6,9 @@ struct FaktaView: View {
     @State private var iconOpacity: Double = 0.6
     @State private var iconScale: Double = 1.0
     @State private var hintTimer: Timer?
+    @State private var lastTapTime: Date = Date()
+    
+    private let margin: CGFloat = 10
     
     var body: some View {
         GeometryReader { geometry in
@@ -31,9 +34,10 @@ struct FaktaView: View {
                             }
                         }
                         
-                        // Floating text box positioned in top 1/3
-                        VStack {
+                        // Dynamic height fact box with tap icon below
+                        VStack(alignment: .trailing, spacing: 16) {
                             if let fact = factsService.currentFact {
+                                // Fact box
                                 Text(fact.text)
                                     .font(.system(size: 18, weight: .medium, design: .rounded))
                                     .lineSpacing(6)
@@ -41,6 +45,7 @@ struct FaktaView: View {
                                     .foregroundColor(.white)
                                     .padding(.horizontal, 24)
                                     .padding(.vertical, 20)
+                                    .frame(maxWidth: .infinity, minHeight: 90, alignment: .center) // Minimum height for ~3 lines
                                     .background(
                                         RoundedRectangle(cornerRadius: 16)
                                             .fill(.ultraThinMaterial.opacity(0.8))
@@ -50,32 +55,32 @@ struct FaktaView: View {
                                             )
                                             .shadow(color: .black.opacity(0.3), radius: 12, x: 0, y: 4)
                                     )
-                                    .padding(.horizontal, 32)
+                                
+                                // Tap icon with circle below fact box, aligned to right edge
+                                HStack {
+                                    Spacer()
+                                    
+                                    Image(systemName: "hand.tap.fill")
+                                        .font(.system(size: 16, weight: .medium))
+                                        .foregroundColor(.white.opacity(iconOpacity))
+                                        .scaleEffect(iconScale)
+                                        .frame(width: 44, height: 44)
+                                        .background(
+                                            Circle()
+                                                .fill(.ultraThinMaterial.opacity(0.9))
+                                                .overlay(
+                                                    Circle()
+                                                        .fill(Color.black.opacity(0.4))
+                                                )
+                                                .shadow(color: .black.opacity(0.3), radius: 8, x: 0, y: 2)
+                                        )
+                                }
                             }
                             
                             Spacer()
                         }
-                        
-                        // Fixed position tap icon in top-right corner
-                        VStack {
-                            HStack {
-                                Spacer()
-                                Image(systemName: "hand.tap.fill")
-                                    .font(.system(size: 14, weight: .medium))
-                                    .foregroundColor(.white.opacity(iconOpacity))
-                                    .padding(8)
-                                    .background(
-                                        Circle()
-                                            .fill(Color.black.opacity(0.3))
-                                    )
-                                    .scaleEffect(iconScale)
-                                    .padding(.top, 20)
-                                    .padding(.trailing, 20)
-                            }
-                            Spacer()
-                        }
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        .padding(.top, geometry.size.height * 0.2) // More top margin
+                        .padding(.horizontal, margin)
+                        .padding(.top, geometry.safeAreaInsets.top + 20) // More top margin to position fact box lower
                         .onAppear {
                             startHintTimer()
                             // Play Grieg's Morning when entering facts
@@ -86,10 +91,7 @@ struct FaktaView: View {
                         }
                     }
                     .onTapGesture {
-                        withAnimation(.easeInOut(duration: 0.5)) {
-                            factsService.showRandomFact()
-                        }
-                        resetHintTimer()
+                        handleTap()
                     }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -98,6 +100,18 @@ struct FaktaView: View {
     }
     
     // MARK: - Helper Functions
+    
+    private func handleTap() {
+        let now = Date()
+        // Prevent multiple taps within 0.6 seconds (slightly longer than animation duration)
+        guard now.timeIntervalSince(lastTapTime) > 0.6 else { return }
+        
+        lastTapTime = now
+        withAnimation(.easeInOut(duration: 0.5)) {
+            factsService.showRandomFact()
+        }
+        resetHintTimer()
+    }
     
     private func startHintTimer() {
         stopHintTimer()
