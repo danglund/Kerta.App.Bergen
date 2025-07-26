@@ -108,7 +108,7 @@ struct ContentView: View {
                     MerView()
                         .environmentObject(audioService)
                         .tabItem {
-                            Label("Mer", systemImage: "ellipsis.circle.fill")
+                            Label("Meir", systemImage: "ellipsis.circle.fill")
                         }
                         .tag(4)
                 }

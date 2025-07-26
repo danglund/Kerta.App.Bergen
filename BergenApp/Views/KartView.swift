@@ -57,15 +57,11 @@ struct KartView: View {
                     .padding()
                 } else if locationService.userLocation != nil {
                     VStack(spacing: 16) {
-                        Text("Du er")
-                            .font(.title3)
-                            .foregroundColor(.secondary)
-                        
                         Text("\(Int(locationService.distanceToBergen)) km")
                             .font(.system(size: 48, weight: .bold, design: .rounded))
                             .foregroundColor(.blue)
                         
-                        Text("hjemmefra")
+                        Text("hemefrå")
                             .font(.title3)
                             .foregroundColor(.secondary)
                         
@@ -114,7 +110,6 @@ struct KartView: View {
                 
                 Spacer()
             }
-            .navigationTitle("Kart")
             .onAppear {
                 if locationService.authorizationStatus == .authorizedWhenInUse ||
                    locationService.authorizationStatus == .authorizedAlways {
