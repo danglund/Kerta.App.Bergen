@@ -24,6 +24,8 @@
 		A1234567890123456789013C /* Bergen5.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A1234567890123456789013D /* Bergen5.mp3 */; };
 		A1234567890123456789013E /* Bergen6.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A1234567890123456789013F /* Bergen6.mp3 */; };
 		A1234567890123456789013G /* Bergen7.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A1234567890123456789013H /* Bergen7.m4a */; };
+		A1234567890123456789013I /* grieg-morning.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A1234567890123456789013J /* grieg-morning.mp3 */; };
+		A1234567890123456789013K /* grieg-mountain-king.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A1234567890123456789013L /* grieg-mountain-king.mp3 */; };
 		E11AF9D70D3F45D4B843CA78 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEC4C8E97AE405993DB5F02 /* WeatherView.swift */; };
 		2B9729723C714DC180E95987 /* RainCheckProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5E379F4114433D82C03888 /* RainCheckProvider.swift */; };
 /* End PBXBuildFile section */
@@ -47,6 +49,8 @@
 		A1234567890123456789013D /* Bergen5.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Bergen5.mp3; sourceTree = "<group>"; };
 		A1234567890123456789013F /* Bergen6.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Bergen6.mp3; sourceTree = "<group>"; };
 		A1234567890123456789013H /* Bergen7.m4a */ = {isa = PBXFileReference; lastKnownFileType = audio.m4a; path = Bergen7.m4a; sourceTree = "<group>"; };
+		A1234567890123456789013J /* grieg-morning.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "grieg-morning.mp3"; sourceTree = "<group>"; };
+		A1234567890123456789013L /* grieg-mountain-king.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "grieg-mountain-king.mp3"; sourceTree = "<group>"; };
 		FEEC4C8E97AE405993DB5F02 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		7A5E379F4114433D82C03888 /* RainCheckProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainCheckProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,6 +144,8 @@
 				A1234567890123456789013D /* Bergen5.mp3 */,
 				A1234567890123456789013F /* Bergen6.mp3 */,
 				A1234567890123456789013H /* Bergen7.m4a */,
+				A1234567890123456789013J /* grieg-morning.mp3 */,
+				A1234567890123456789013L /* grieg-mountain-king.mp3 */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -211,6 +217,8 @@
 				A1234567890123456789013C /* Bergen5.mp3 in Resources */,
 				A1234567890123456789013E /* Bergen6.mp3 in Resources */,
 				A1234567890123456789013G /* Bergen7.m4a in Resources */,
+				A1234567890123456789013I /* grieg-morning.mp3 in Resources */,
+				A1234567890123456789013K /* grieg-mountain-king.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
