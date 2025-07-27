@@ -4,11 +4,13 @@ struct WeatherView: View {
     @StateObject private var fakeProvider = FakeBergenWeatherProvider()
     @StateObject private var realProvider = YrNoWeatherProvider()
     @StateObject private var complaintService = NewspaperComplaintService()
+    @StateObject private var xComplaintService = XComplaintService()
     @State private var showingShareSheet = false
     @State private var shareText = ""
     @State private var showingRealWeather = false
     @State private var weatherMessage = ""
     @State private var showingComplaintView = false
+    @State private var showingXComplaintView = false
     
     // Current weather state (initially from fake provider, then real weather)
     private var currentProvider: any RainCheckProvider {
@@ -118,7 +120,24 @@ struct WeatherView: View {
                                 .cornerRadius(12)
                             }
                             
-                            // Share buttons for sunny weather
+                            // X/Twitter complaint button - always second
+                            Button(action: {
+                                xComplaintService.updateWeather(isRainy: realProvider.isRainy)
+                                showingXComplaintView = true
+                            }) {
+                                HStack {
+                                    Image(systemName: "bubble.left.and.text.bubble.right")
+                                    Text("Klag på X")
+                                }
+                                .font(.headline)
+                                .foregroundColor(.white)
+                                .padding()
+                                .frame(maxWidth: .infinity)
+                                .background(realProvider.isRainy ? Color.indigo : Color.red)
+                                .cornerRadius(12)
+                            }
+                            
+                            // Share button for sunny weather
                             if !realProvider.isRainy {
                                 Button(action: {
                                     shareText = "Sola skin i Bergen i dag. Tenk på det, du!"
@@ -133,22 +152,6 @@ struct WeatherView: View {
                                     .padding()
                                     .frame(maxWidth: .infinity)
                                     .background(Color.orange)
-                                    .cornerRadius(12)
-                                }
-                                
-                                Button(action: {
-                                    shareText = "Østlendingar brif med sol – men vi har sol vi òg! #BergenSkins"
-                                    showingShareSheet = true
-                                }) {
-                                    HStack {
-                                        Image(systemName: "flame.fill")
-                                        Text("Post på X")
-                                    }
-                                    .font(.headline)
-                                    .foregroundColor(.white)
-                                    .padding()
-                                    .frame(maxWidth: .infinity)
-                                    .background(Color.red)
                                     .cornerRadius(12)
                                 }
                             }
@@ -167,6 +170,9 @@ struct WeatherView: View {
         }
         .sheet(isPresented: $showingComplaintView) {
             ComplaintPreviewView(complaintService: complaintService)
+        }
+        .sheet(isPresented: $showingXComplaintView) {
+            XComplaintPreviewView(xComplaintService: xComplaintService)
         }
         .onAppear {
             startWeatherSequence()

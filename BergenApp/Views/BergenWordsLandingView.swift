@@ -184,7 +184,8 @@ struct BergenWordsLandingView: View {
                             .padding(.top, 8)
                         }
                         
-                        Spacer(minLength: 100) // Space for tab bar
+                        // Space for tab bar and music player
+                        Spacer(minLength: audioService.currentTrack != nil ? 140 : 80)
                     }
                 }
             }

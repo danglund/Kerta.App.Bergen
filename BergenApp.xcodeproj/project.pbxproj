@@ -28,11 +28,26 @@
 		A1234567890123456789013K /* grieg-mountain-king.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A1234567890123456789013L /* grieg-mountain-king.mp3 */; };
 		E11AF9D70D3F45D4B843CA78 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEC4C8E97AE405993DB5F02 /* WeatherView.swift */; };
 		2B9729723C714DC180E95987 /* RainCheckProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5E379F4114433D82C03888 /* RainCheckProvider.swift */; };
-		A1234567890123456789014A /* newspaper-complaints.json in Resources */ = {isa = PBXBuildFile; fileRef = A1234567890123456789014B /* newspaper-complaints.json */; };
+		D1234567890123456789001A /* x-complaints.json in Resources */ = {isa = PBXBuildFile; fileRef = D1234567890123456789001B /* x-complaints.json */; };
+		D1234567890123456789002A /* XComplaintService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1234567890123456789002B /* XComplaintService.swift */; };
+		D1234567890123456789003A /* XComplaintPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1234567890123456789003B /* XComplaintPreviewView.swift */; };
 		A1234567890123456789014C /* newspapers.json in Resources */ = {isa = PBXBuildFile; fileRef = A1234567890123456789014D /* newspapers.json */; };
 		A1234567890123456789014E /* NewspaperComplaintService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1234567890123456789014F /* NewspaperComplaintService.swift */; };
 		A1234567890123456789014G /* NewspaperComplaintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1234567890123456789014H /* NewspaperComplaintView.swift */; };
 		A1234567890123456789014I /* ComplaintPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1234567890123456789014J /* ComplaintPreviewView.swift */; };
+		B1234567890123456789001A /* BergenWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1234567890123456789001B /* BergenWord.swift */; };
+		B1234567890123456789002A /* BergenOrdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1234567890123456789002B /* BergenOrdView.swift */; };
+		B1234567890123456789003A /* BergenWordsLandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1234567890123456789003B /* BergenWordsLandingView.swift */; };
+		B1234567890123456789004A /* BergenWordsFlashcardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1234567890123456789004B /* BergenWordsFlashcardView.swift */; };
+		B1234567890123456789005A /* BergenWordsQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1234567890123456789005B /* BergenWordsQuizView.swift */; };
+		B1234567890123456789006A /* BergenWordsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1234567890123456789006B /* BergenWordsService.swift */; };
+		B1234567890123456789007A /* bergenske-ord-betydning.json in Resources */ = {isa = PBXBuildFile; fileRef = B1234567890123456789007B /* bergenske-ord-betydning.json */; };
+		B1234567890123456789008A /* bergenske-uttrykk.json in Resources */ = {isa = PBXBuildFile; fileRef = B1234567890123456789008B /* bergenske-uttrykk.json */; };
+		B1234567890123456789009A /* dialektord-personer.json in Resources */ = {isa = PBXBuildFile; fileRef = B1234567890123456789009B /* dialektord-personer.json */; };
+		B1234567890123456789010A /* dialektord-ting-tang.json in Resources */ = {isa = PBXBuildFile; fileRef = B1234567890123456789010B /* dialektord-ting-tang.json */; };
+		B1234567890123456789011A /* Classicals.de - Grieg - Peer Gynt Suite No. 1, Op. 46 - III. Anitra's Dream.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B1234567890123456789011B /* Classicals.de - Grieg - Peer Gynt Suite No. 1, Op. 46 - III. Anitra's Dream.mp3 */; };
+		C1234567890123456789001A /* sunny-complaints.json in Resources */ = {isa = PBXBuildFile; fileRef = C1234567890123456789001B /* sunny-complaints.json */; };
+		C1234567890123456789002A /* rainy-complaints.json in Resources */ = {isa = PBXBuildFile; fileRef = C1234567890123456789002B /* rainy-complaints.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,11 +73,26 @@
 		A1234567890123456789013L /* grieg-mountain-king.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "grieg-mountain-king.mp3"; sourceTree = "<group>"; };
 		FEEC4C8E97AE405993DB5F02 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		7A5E379F4114433D82C03888 /* RainCheckProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainCheckProvider.swift; sourceTree = "<group>"; };
-		A1234567890123456789014B /* newspaper-complaints.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "newspaper-complaints.json"; sourceTree = "<group>"; };
+		D1234567890123456789001B /* x-complaints.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "x-complaints.json"; sourceTree = "<group>"; };
+		D1234567890123456789002B /* XComplaintService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XComplaintService.swift; sourceTree = "<group>"; };
+		D1234567890123456789003B /* XComplaintPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XComplaintPreviewView.swift; sourceTree = "<group>"; };
 		A1234567890123456789014D /* newspapers.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "newspapers.json"; sourceTree = "<group>"; };
 		A1234567890123456789014F /* NewspaperComplaintService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewspaperComplaintService.swift; sourceTree = "<group>"; };
 		A1234567890123456789014H /* NewspaperComplaintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewspaperComplaintView.swift; sourceTree = "<group>"; };
 		A1234567890123456789014J /* ComplaintPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplaintPreviewView.swift; sourceTree = "<group>"; };
+		B1234567890123456789001B /* BergenWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BergenWord.swift; sourceTree = "<group>"; };
+		B1234567890123456789002B /* BergenOrdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BergenOrdView.swift; sourceTree = "<group>"; };
+		B1234567890123456789003B /* BergenWordsLandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BergenWordsLandingView.swift; sourceTree = "<group>"; };
+		B1234567890123456789004B /* BergenWordsFlashcardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BergenWordsFlashcardView.swift; sourceTree = "<group>"; };
+		B1234567890123456789005B /* BergenWordsQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BergenWordsQuizView.swift; sourceTree = "<group>"; };
+		B1234567890123456789006B /* BergenWordsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BergenWordsService.swift; sourceTree = "<group>"; };
+		B1234567890123456789007B /* bergenske-ord-betydning.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "bergenske-ord-betydning.json"; sourceTree = "<group>"; };
+		B1234567890123456789008B /* bergenske-uttrykk.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "bergenske-uttrykk.json"; sourceTree = "<group>"; };
+		B1234567890123456789009B /* dialektord-personer.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "dialektord-personer.json"; sourceTree = "<group>"; };
+		B1234567890123456789010B /* dialektord-ting-tang.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "dialektord-ting-tang.json"; sourceTree = "<group>"; };
+		B1234567890123456789011B /* Classicals.de - Grieg - Peer Gynt Suite No. 1, Op. 46 - III. Anitra's Dream.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Classicals.de - Grieg - Peer Gynt Suite No. 1, Op. 46 - III. Anitra's Dream.mp3"; sourceTree = "<group>"; };
+		C1234567890123456789001B /* sunny-complaints.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "sunny-complaints.json"; sourceTree = "<group>"; };
+		C1234567890123456789002B /* rainy-complaints.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "rainy-complaints.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +145,11 @@
 				FEEC4C8E97AE405993DB5F02 /* WeatherView.swift */,
 				A1234567890123456789014H /* NewspaperComplaintView.swift */,
 				A1234567890123456789014J /* ComplaintPreviewView.swift */,
+				D1234567890123456789003B /* XComplaintPreviewView.swift */,
+				B1234567890123456789002B /* BergenOrdView.swift */,
+				B1234567890123456789003B /* BergenWordsLandingView.swift */,
+				B1234567890123456789004B /* BergenWordsFlashcardView.swift */,
+				B1234567890123456789005B /* BergenWordsQuizView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -126,6 +161,8 @@
 				A1234567890123456789012N /* LocationService.swift */,
 				7A5E379F4114433D82C03888 /* RainCheckProvider.swift */,
 				A1234567890123456789014F /* NewspaperComplaintService.swift */,
+				D1234567890123456789002B /* XComplaintService.swift */,
+				B1234567890123456789006B /* BergenWordsService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -134,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				A1234567890123456789012P /* BergenFact.swift */,
+				B1234567890123456789001B /* BergenWord.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -142,9 +180,12 @@
 			isa = PBXGroup;
 			children = (
 				A1234567890123456789012T /* bergen-facts.json */,
-				A1234567890123456789014B /* newspaper-complaints.json */,
+				D1234567890123456789001B /* x-complaints.json */,
 				A1234567890123456789014D /* newspapers.json */,
+				C1234567890123456789001B /* sunny-complaints.json */,
+				C1234567890123456789002B /* rainy-complaints.json */,
 				A1234567890123456789011J /* Audio */,
+				B1234567890123456789012A /* BergenWords */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -161,8 +202,20 @@
 				A1234567890123456789013H /* Bergen7.m4a */,
 				A1234567890123456789013J /* grieg-morning.mp3 */,
 				A1234567890123456789013L /* grieg-mountain-king.mp3 */,
+				B1234567890123456789011B /* Classicals.de - Grieg - Peer Gynt Suite No. 1, Op. 46 - III. Anitra's Dream.mp3 */,
 			);
 			path = Audio;
+			sourceTree = "<group>";
+		};
+		B1234567890123456789012A /* BergenWords */ = {
+			isa = PBXGroup;
+			children = (
+				B1234567890123456789007B /* bergenske-ord-betydning.json */,
+				B1234567890123456789008B /* bergenske-uttrykk.json */,
+				B1234567890123456789009B /* dialektord-personer.json */,
+				B1234567890123456789010B /* dialektord-ting-tang.json */,
+			);
+			path = BergenWords;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,7 +278,7 @@
 			files = (
 				A1234567890123456789012Q /* Assets.xcassets in Resources */,
 				A1234567890123456789012S /* bergen-facts.json in Resources */,
-				A1234567890123456789014A /* newspaper-complaints.json in Resources */,
+				D1234567890123456789001A /* x-complaints.json in Resources */,
 				A1234567890123456789014C /* newspapers.json in Resources */,
 				A1234567890123456789012U /* Bergen1.mp3 in Resources */,
 				A1234567890123456789012W /* Bergen2.mp3 in Resources */,
@@ -236,6 +289,13 @@
 				A1234567890123456789013G /* Bergen7.m4a in Resources */,
 				A1234567890123456789013I /* grieg-morning.mp3 in Resources */,
 				A1234567890123456789013K /* grieg-mountain-king.mp3 in Resources */,
+				B1234567890123456789007A /* bergenske-ord-betydning.json in Resources */,
+				B1234567890123456789008A /* bergenske-uttrykk.json in Resources */,
+				B1234567890123456789009A /* dialektord-personer.json in Resources */,
+				B1234567890123456789010A /* dialektord-ting-tang.json in Resources */,
+				B1234567890123456789011A /* Classicals.de - Grieg - Peer Gynt Suite No. 1, Op. 46 - III. Anitra's Dream.mp3 in Resources */,
+				C1234567890123456789001A /* sunny-complaints.json in Resources */,
+				C1234567890123456789002A /* rainy-complaints.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +319,14 @@
 				A1234567890123456789014E /* NewspaperComplaintService.swift in Sources */,
 				A1234567890123456789014G /* NewspaperComplaintView.swift in Sources */,
 				A1234567890123456789014I /* ComplaintPreviewView.swift in Sources */,
+				B1234567890123456789001A /* BergenWord.swift in Sources */,
+				B1234567890123456789002A /* BergenOrdView.swift in Sources */,
+				B1234567890123456789003A /* BergenWordsLandingView.swift in Sources */,
+				B1234567890123456789004A /* BergenWordsFlashcardView.swift in Sources */,
+				B1234567890123456789005A /* BergenWordsQuizView.swift in Sources */,
+				B1234567890123456789006A /* BergenWordsService.swift in Sources */,
+				D1234567890123456789002A /* XComplaintService.swift in Sources */,
+				D1234567890123456789003A /* XComplaintPreviewView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,38 @@
+{
+  "templates": [
+    {
+      "id": "angry-sunny-weather",
+      "title": "Surt om mangel på solnyheiter",
+      "category": "humor",
+      "characters": 1114,
+      "length": "medium",
+      "topic": "weather",
+      "weather": "sunny",
+      "sentiment": "angry",
+      "text": "Ka i svarte helsikken e det med [NewsPaper]-redaksjonen?! No sit eg her på altanen i Sandviken med ein lunken Hansa i neven, og trur du ikkje sola faktisk skinn! Eg måtte blinka to gonga før eg skjønte det ikkje va refleksjon frå bossspannet. Men kor e [NewsPaper]? E det bilder av smilande bergensarar i solsteiken på forsida? NEI! Ikkje eitt ord! Men med ein gong det e 28 gradar i Asker og nokre Østlænningar slenger rævo i Akerselva, då smell det med heile 14 saker om is, baris og \"sommerlykke\". Vi i Bergen får knapt ein pushvarsel når vi går tørrskodde over Torgallmenningen!\n\nEg skjønne det godt, dokkar i [NewsPaper] sitt jo der inne på det derre dvaske Østlandet og trur Noreg slutta etter Drammen. Men me her i Bergen har faktisk lært oss å elska regnet – me dyrka det, bada i det, me KLER oss i det. Og når sola først titta fram, e det som å få helgefølelsen og 17. mai på same tid. Men det bryr ikkje [NewsPaper] seg om. Kanskje dokkar rett og slett e redde for at me ser betre ut i sollys? Kanskje dokkar ikkje tåle tanken på at Bergen i sol e vakrare enn heile Oslo vest til saman? Skjerp dokkar, [NewsPaper]. Me eksistera, me skinn – og me har sol i dag. *Så då får dokkar skriva om det, jævla østlænningar.*",
+      "placeholders": {
+        "NewsPaper": {
+          "description": "Name of the newspaper, for example VG",
+          "example": "VG"
+        }
+      }
+    },
+    {
+      "id": "media-critique-sunny-weather",
+      "title": "Mediemangel på solskinn",
+      "category": "media critique",
+      "characters": 1082,
+      "length": "medium",
+      "topic": "weather",
+      "weather": "sunny",
+      "sentiment": "angry",
+      "text": "Ka faen e det som skal til for at [NewsPaper] gidde å skriva om sol i Bergen?! Her har me hatt *to* samanhengande dagar med blå himmel og varme bris frå Løvstakken, og ikkje eitt einaste kamera har vore på plass. I Oslo smell dei opp live-studio viss det e antydning til sol i Frognerparken, men når Bergen ligg bada i sol, då e det heilt stille. Må me senda opp røyksignal frå Fløyen for å få merksemd, eller?\n\nMe veit at dokkar i [NewsPaper] blir fuktige i augene av tanken på Ekebergskrenten i motlys, men tru det eller ei: Bergen eksistera òg når det ikkje regna. Me e ikkje berre ein kuliss for hurtigruta-reklamar, me e ein ekte by med ekte folk som faktisk KAN få D-vitamin naturleg! Men det får vel ikkje plass mellom is-testar frå Grünerløkka og badeandreportasjar frå Bygdøy, sant? Skjerpings. Neste gong det e sol i Bergen, så håpar eg [NewsPaper] dekka det som om det va eit statsbesøk. For det e faen meg like sjeldent.",
+      "placeholders": {
+        "NewsPaper": {
+          "description": "Name of the newspaper, for example VG",
+          "example": "VG"
+        }
+      }
+    }
+  ]
+}

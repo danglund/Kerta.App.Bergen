@@ -1,0 +1,124 @@
+{
+  "posts": [
+    {
+      "id": "media-ignorance-sun",
+      "post": {
+        "characters": 209,
+        "length": "short",
+        "topic": "weather",
+        "weather": "sun",
+        "sentiment": "sarcastic",
+        "platform": "twitter",
+        "text": "Det e sol i Bergen og ingen skriv om det. Ka gjer Oslo? Badar i fontener og får live-dekning. Me? Me får D-vitamin for første gong sidan 2003 og VG sitt fortsatt og dekka softis på Aker Brygge. Lat det brenna."
+      }
+    },
+    {
+      "id": "collective-confusion-sun",
+      "post": {
+        "characters": 94,
+        "length": "short",
+        "topic": "weather",
+        "weather": "sun",
+        "sentiment": "sarcastic",
+        "platform": "twitter",
+        "text": "Bergen i sol = kollektiv tilstand av forvirring. Eg såg ein som prøvde å smørja seg med Hansa."
+      }
+    },
+    {
+      "id": "sunburn-coverage-sun",
+      "post": {
+        "characters": 130,
+        "length": "short",
+        "topic": "weather",
+        "weather": "sun",
+        "sentiment": "sarcastic",
+        "platform": "twitter",
+        "text": "To timar sol i Bergen og halvparten av byen har fått gnagsår av shortsen. Ingen dekning. Oslo får pressemelding for skyfri himmel."
+      }
+    },
+    {
+      "id": "breaking-news-sun",
+      "post": {
+        "characters": 113,
+        "length": "short",
+        "topic": "weather",
+        "weather": "sun",
+        "sentiment": "sarcastic",
+        "platform": "twitter",
+        "text": "BREAKING: Sol i Bergen. VG sender ikkje ein gong eit Insta-story. Kva må me gjera, slenga ein østlending i Vågen?"
+      }
+    },
+    {
+      "id": "panic-grilling-sun",
+      "post": {
+        "characters": 126,
+        "length": "short",
+        "topic": "weather",
+        "weather": "sun",
+        "sentiment": "sarcastic",
+        "platform": "twitter",
+        "text": "Folk i Bergen no: solbriller, panikk og grilling på altanen. Oslo-media: 'sommaren e tilbake i Asker'... Ikkje eit ord om oss."
+      }
+    },
+    {
+      "id": "weather-bias-sun",
+      "post": {
+        "characters": 90,
+        "length": "short",
+        "topic": "weather",
+        "weather": "sun",
+        "sentiment": "sarcastic",
+        "platform": "twitter",
+        "text": "Sol på Vestlandet, og VG melder: 'Lettskyet i Oslo'. Eg håpar dei får regn i fellesferien."
+      }
+    },
+    {
+      "id": "disbelief-check-sun",
+      "post": {
+        "characters": 108,
+        "length": "short",
+        "topic": "weather",
+        "weather": "sun",
+        "sentiment": "sarcastic",
+        "platform": "twitter",
+        "text": "Eg måtte sjekka yr tre gongar i dag. Ikkje fordi eg ikkje trudde på sol, men fordi eg trudde eg hadde døydd."
+      }
+    },
+    {
+      "id": "tourist-jubilation-sun",
+      "post": {
+        "characters": 108,
+        "length": "short",
+        "topic": "weather",
+        "weather": "sun",
+        "sentiment": "sarcastic",
+        "platform": "twitter",
+        "text": "Sol i Bergen. Turistane jublar, lokalbefolkninga stirrar mållause på himmelen som om Jesus har kome attende."
+      }
+    },
+    {
+      "id": "sardine-coverage-sun",
+      "post": {
+        "characters": 123,
+        "length": "short",
+        "topic": "weather",
+        "weather": "sun",
+        "sentiment": "sarcastic",
+        "platform": "twitter",
+        "text": "Folk i Bergen legg seg på brygga som sild på land. Oslo? Får direktesending frå Sørenga. Vi får skyggeplass bak Bossnettet."
+      }
+    },
+    {
+      "id": "drone-idea-sun",
+      "post": {
+        "characters": 129,
+        "length": "short",
+        "topic": "weather",
+        "weather": "sun",
+        "sentiment": "sarcastic",
+        "platform": "twitter",
+        "text": "Sola skin, me skin – men ingen skriv. Me burde ha leid inn ein drone og sendt live til Østlandet med 'Helsing frå Vest'."
+      }
+    }
+  ]
+}

@@ -41,7 +41,7 @@
       "term": "Dies",
       "correct_options": ["Deres"],
       "long_explanation": null,
-      "wrong_options": ["Dette", "Dine", "Våres", "Hennes", "Sin", "Mine"]
+      "wrong_options": ["Dette", "Dine", "Våres", "Hennes", "Sin", "Sutte pupp"]
     },
     {
       "term": "Dòtte",
@@ -53,13 +53,13 @@
       "term": "Dikkedarier",
       "correct_options": ["Om og men"],
       "long_explanation": null,
-      "wrong_options": ["Ro", "Smil", "Skrik", "Kaos", "Orden", "Hygge"]
+      "wrong_options": ["Ro", "Smil", "Skrik", "Kaos", "Orden", "Penistilbehør"]
     },
     {
       "term": "Doddegutt",
       "correct_options": ["Pappagutt", "Snobb"],
       "long_explanation": null,
-      "wrong_options": ["Arbeider", "Bonde", "Student", "Guttunge", "Lokal", "Fisker"]
+      "wrong_options": ["Arbeider", "Bonde", "Student", "Guttunge", "Lokal", "Grisegutt"]
     },
     {
       "term": "Drag over kjeften",
@@ -89,7 +89,7 @@
       "term": "Fakerten",
       "correct_options": ["Søren"],
       "long_explanation": null,
-      "wrong_options": ["Hallo", "Takk", "Helt", "Gledelig", "Si takk", "Gnien"]
+      "wrong_options": ["Hallo", "Takk", "Helt", "Gledelig", "Falsk orgasme", "Gnien"]
     },
     {
       "term": "Gem",
@@ -101,31 +101,31 @@
       "term": "Hamna",
       "correct_options": ["Ende opp"],
       "long_explanation": null,
-      "wrong_options": ["Starte", "Skulle begynne", "Feire", "Svinge", "Flytte", "Brenne"]
+      "wrong_options": ["Starte", "Skulle begynne", "Feire", "Svinge", "Havnen", "Brenne"]
     },
     {
       "term": "Knall i padden",
       "correct_options": ["Kjempebra", "Veldig gøy"],
       "long_explanation": ["Brukes om noe som er super kult eller morsomt"],
-      "wrong_options": ["Farlig", "Kjedelig", "Vanskelig", "Trist", "Skummelt", "Sakte"]
+      "wrong_options": ["Farlig", "Kjedelig", "Vanskelig", "Ødelagt iPad", "Skummelt", "Sakte"]
     },
     {
       "term": "Ta det på gefylen",
       "correct_options": ["Ha det på følelsen"],
       "long_explanation": null,
-      "wrong_options": ["Se det skje", "Høre det selv", "Lese det i boka", "Føle det fysisk", "Smake det", "Lukte det"]
+      "wrong_options": ["Se det skje", "Høre det selv", "Lese det i boka", "Føle det fysisk", "Smake det", "Beføle buksefront"]
     },
     {
       "term": "Molefonken",
       "correct_options": ["Sur", "Trist", "Fornærmet"],
       "long_explanation": null,
-      "wrong_options": ["Glad", "Latterfull", "Spent", "Rolig", "Nysgjerrig", "Energisk"]
+      "wrong_options": ["Glad", "Latterfull", "Spent", "Rolig", "Nysgjerrig", "Nedstemt funk"]
     },
     {
       "term": "Månebedotten",
       "correct_options": ["Overrasket"],
       "long_explanation": null,
-      "wrong_options": ["Rolig", "Laus", "Glad", "Trøtt", "Søvnig", "Fornøyd"]
+      "wrong_options": ["Rolig", "Laus", "Glad", "Trøtt", "Søvnig", "Uvanlig intimbarbering"]
     },
     {
       "term": "Tidi",
@@ -143,19 +143,19 @@
       "term": "Prikkevere",
       "correct_options": ["Rydde", "Ta vare på"],
       "long_explanation": null,
-      "wrong_options": ["Søle til", "Miste", "Spille", "Late som", "Skjelle ut", "Mure"]
+      "wrong_options": ["Søle til", "Miste", "Spille", "Late som", "Skjelle ut", "Ereksjonsverdig"]
     },
     {
       "term": "Sjaine",
       "correct_options": ["Ordne", "Pynte", "Pusse opp"],
       "long_explanation": null,
-      "wrong_options": ["Søppel", "Klippe", "Brette", "Fjerne", "Male", "Skrive"]
+      "wrong_options": ["Søppel", "Klippe", "Brette", "Fjerne", "Male", "Ustødig gange"]
     },
     {
       "term": "Sløkket",
       "correct_options": ["Dum", "Helt utenfor"],
       "long_explanation": null,
-      "wrong_options": ["Smart", "Styrtrik", "Aktiv", "Energisk", "Rolig", "Høflig"]
+      "wrong_options": ["Smart", "Styrtrik", "Aktiv", "Energisk", "Beruset", "Dritings"]
     },
     {
       "term": "Smite",
@@ -167,7 +167,7 @@
       "term": "Slitan",
       "correct_options": ["Gratulere med nye klær el.l."],
       "long_explanation": null,
-      "wrong_options": ["Sulte", "Kle av", "Sove", "Tøyse", "Skynte seg", "Gi gaver"]
+      "wrong_options": ["Sulte", "Kle av", "Sove", "Heroinknekk", "Skynte seg", "Gi gaver"]
     }
   ]
 }

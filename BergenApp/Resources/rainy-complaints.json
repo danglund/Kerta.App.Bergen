@@ -1,23 +1,6 @@
 {
   "templates": [
     {
-      "id": "angry-sunny-weather",
-      "title": "Surt om mangel på solnyheiter",
-      "category": "humor",
-      "characters": 1114,
-      "length": "medium",
-      "topic": "weather",
-      "weather": "sunny",
-      "sentiment": "angry",
-      "text": "Ka i svarte helsikken e det med [NewsPaper]-redaksjonen?! No sit eg her på altanen i Sandviken med ein lunken Hansa i neven, og trur du ikkje sola faktisk skinn! Eg måtte blinka to gonga før eg skjønte det ikkje va refleksjon frå bossspannet. Men kor e [NewsPaper]? E det bilder av smilande bergensarar i solsteiken på forsida? NEI! Ikkje eitt ord! Men med ein gong det e 28 gradar i Asker og nokre Østlænningar slenger rævo i Akerselva, då smell det med heile 14 saker om is, baris og \"sommerlykke\". Vi i Bergen får knapt ein pushvarsel når vi går tørrskodde over Torgallmenningen!\n\nEg skjønne det godt, dokkar i [NewsPaper] sitt jo der inne på det derre dvaske Østlandet og trur Noreg slutta etter Drammen. Men me her i Bergen har faktisk lært oss å elska regnet – me dyrka det, bada i det, me KLER oss i det. Og når sola først titta fram, e det som å få helgefølelsen og 17. mai på same tid. Men det bryr ikkje [NewsPaper] seg om. Kanskje dokkar rett og slett e redde for at me ser betre ut i sollys? Kanskje dokkar ikkje tåle tanken på at Bergen i sol e vakrare enn heile Oslo vest til saman? Skjerp dokkar, [NewsPaper]. Me eksistera, me skinn – og me har sol i dag. *Så då får dokkar skriva om det, jævla østlænningar.*",
-      "placeholders": {
-        "NewsPaper": {
-          "description": "Name of the newspaper, for example VG",
-          "example": "VG"
-        }
-      }
-    },
-    {
       "id": "defensive-rainy-weather",
       "title": "I forsvar av bergensregnet",
       "category": "humor",

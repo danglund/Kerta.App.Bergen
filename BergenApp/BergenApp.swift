@@ -127,7 +127,7 @@ struct ContentView: View {
                         Spacer()
                         SimpleMusicPlayerPanel(audioService: audioService)
                     }
-                    .padding(.bottom, geometry.safeAreaInsets.bottom + 49) // Tab bar height + safe area
+                    .padding(.bottom, 49) // Position directly above tab bar
                     .transition(.asymmetric(
                         insertion: .move(edge: .bottom).combined(with: .opacity),
                         removal: .move(edge: .bottom).combined(with: .opacity)

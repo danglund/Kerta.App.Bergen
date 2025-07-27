@@ -48,14 +48,39 @@ class NewspaperComplaintService: ObservableObject {
     }
     
     private func loadTemplates() {
-        guard let url = Bundle.main.url(forResource: "newspaper-complaints", withExtension: "json"),
-              let data = try? Data(contentsOf: url),
-              let complaintData = try? JSONDecoder().decode(ComplaintTemplates.self, from: data) else {
-            print("Failed to load newspaper complaint templates")
-            return
+        var allTemplates: [ComplaintTemplate] = []
+        
+        // Load sunny complaints
+        if let sunnyUrl = Bundle.main.url(forResource: "sunny-complaints", withExtension: "json"),
+           let sunnyData = try? Data(contentsOf: sunnyUrl),
+           let sunnyComplaintData = try? JSONDecoder().decode(ComplaintTemplates.self, from: sunnyData) {
+            allTemplates.append(contentsOf: sunnyComplaintData.templates)
+        } else {
+            print("Failed to load sunny complaint templates")
         }
         
-        self.templates = complaintData.templates
+        // Load rainy complaints
+        if let rainyUrl = Bundle.main.url(forResource: "rainy-complaints", withExtension: "json"),
+           let rainyData = try? Data(contentsOf: rainyUrl),
+           let rainyComplaintData = try? JSONDecoder().decode(ComplaintTemplates.self, from: rainyData) {
+            allTemplates.append(contentsOf: rainyComplaintData.templates)
+        } else {
+            print("Failed to load rainy complaint templates")
+        }
+        
+        // Fallback to original file if new files don't exist
+        if allTemplates.isEmpty {
+            if let url = Bundle.main.url(forResource: "newspaper-complaints", withExtension: "json"),
+               let data = try? Data(contentsOf: url),
+               let complaintData = try? JSONDecoder().decode(ComplaintTemplates.self, from: data) {
+                allTemplates = complaintData.templates
+            } else {
+                print("Failed to load any newspaper complaint templates")
+                return
+            }
+        }
+        
+        self.templates = allTemplates
         updateSelectedTemplate()
     }
     
