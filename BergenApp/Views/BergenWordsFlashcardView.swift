@@ -37,32 +37,26 @@ struct BergenWordsFlashcardView: View {
                     )
                 }
                 
-                // Close button
+                // Back button and progress indicator
                 VStack {
                     HStack {
-                        Button("Lukk") {
-                            dismiss()
+                        Button(action: { dismiss() }) {
+                            Image(systemName: "chevron.left")
+                                .font(.system(size: 18, weight: .medium))
+                                .foregroundColor(.white.opacity(0.7))
                         }
-                        .font(.system(size: 16, weight: .medium))
-                        .foregroundColor(.white)
-                        .padding(.horizontal, 16)
-                        .padding(.vertical, 8)
-                        .background(
-                            RoundedRectangle(cornerRadius: 20)
-                                .fill(.ultraThinMaterial.opacity(0.8))
-                        )
                         
                         Spacer()
                         
                         // Progress indicator
                         Text("\(currentWordIndex + 1) / \(words.count)")
                             .font(.system(size: 14, weight: .medium))
-                            .foregroundColor(.white)
+                            .foregroundColor(.white.opacity(0.8))
                             .padding(.horizontal, 12)
                             .padding(.vertical, 6)
                             .background(
                                 RoundedRectangle(cornerRadius: 16)
-                                    .fill(.ultraThinMaterial.opacity(0.8))
+                                    .fill(.ultraThinMaterial.opacity(0.6))
                             )
                     }
                     .padding(.horizontal, 20)
@@ -71,69 +65,41 @@ struct BergenWordsFlashcardView: View {
                     Spacer()
                 }
                 
-                // Content card
+                // Content card using FactsTextBoxView design
                 VStack {
                     if let word = currentWord {
-                        ZStack(alignment: .bottomTrailing) {
-                            VStack(spacing: 20) {
-                                // Category badge
-                                Text(word.category.chapter.chapter)
-                                    .font(.system(size: 12, weight: .medium))
-                                    .foregroundColor(.white.opacity(0.8))
-                                    .padding(.horizontal, 12)
-                                    .padding(.vertical, 4)
-                                    .background(
-                                        RoundedRectangle(cornerRadius: 8)
-                                            .fill(Color.black.opacity(0.3))
-                                    )
+                        // Single stable text box with question and answer
+                        VStack(alignment: .trailing, spacing: 16) {
+                            // Text box with stable question and answer
+                            VStack(spacing: 16) {
+                                // Question text (always visible)
+                                Text(getQuestionText(for: word))
+                                    .font(.system(size: 24, weight: .bold, design: .rounded))
+                                    .multilineTextAlignment(.center)
+                                    .foregroundColor(.white)
                                 
-                                if !showingAnswer {
-                                    // Question state - show intro and term
-                                    VStack(spacing: 16) {
-                                        Text("Hva betyr:")
-                                            .font(.system(size: 16, weight: .medium))
+                                // Answer text (appears when showingAnswer is true)
+                                if showingAnswer {
+                                    VStack(spacing: 8) {
+                                        // Divider line
+                                        Rectangle()
+                                            .fill(.white.opacity(0.3))
+                                            .frame(height: 1)
+                                            .frame(maxWidth: 120)
+                                        
+                                        // Answer content
+                                        Text(getAnswerText(for: word))
+                                            .font(.system(size: 18, weight: .medium, design: .default))
+                                            .multilineTextAlignment(.center)
                                             .foregroundColor(.white.opacity(0.9))
-                                        
-                                        Text(word.word.term)
-                                            .font(.system(size: 28, weight: .bold, design: .rounded))
-                                            .foregroundColor(.white)
-                                            .multilineTextAlignment(.center)
+                                            .italic()
                                     }
-                                } else {
-                                    // Answer state - show term and meaning
-                                    VStack(spacing: 16) {
-                                        Text(word.word.term)
-                                            .font(.system(size: 24, weight: .bold, design: .rounded))
-                                            .foregroundColor(.white)
-                                            .multilineTextAlignment(.center)
-                                        
-                                        VStack(spacing: 8) {
-                                            ForEach(word.word.correctOptions, id: \.self) { option in
-                                                Text(option)
-                                                    .font(.system(size: 18, weight: .medium))
-                                                    .foregroundColor(.white)
-                                                    .multilineTextAlignment(.center)
-                                            }
-                                        }
-                                        
-                                        // Show explanation if available
-                                        if let explanation = word.word.longExplanation {
-                                            VStack(spacing: 4) {
-                                                ForEach(explanation, id: \.self) { line in
-                                                    Text(line)
-                                                        .font(.system(size: 14, weight: .regular))
-                                                        .foregroundColor(.white.opacity(0.8))
-                                                        .multilineTextAlignment(.center)
-                                                        .italic()
-                                                }
-                                            }
-                                            .padding(.top, 8)
-                                        }
-                                    }
+                                    .transition(.opacity.combined(with: .move(edge: .top)))
                                 }
                             }
                             .padding(.horizontal, 24)
                             .padding(.vertical, 20)
+                            .frame(maxWidth: .infinity, minHeight: 120, alignment: .center)
                             .background(
                                 RoundedRectangle(cornerRadius: 16)
                                     .fill(.ultraThinMaterial.opacity(0.8))
@@ -144,19 +110,30 @@ struct BergenWordsFlashcardView: View {
                                     .shadow(color: .black.opacity(0.3), radius: 12, x: 0, y: 4)
                             )
                             
-                            // Tap hint icon
-                            Image(systemName: showingAnswer ? "arrow.right.circle.fill" : "hand.tap.fill")
-                                .font(.system(size: 14, weight: .medium))
-                                .foregroundColor(.white.opacity(iconOpacity))
-                                .padding(6)
-                                .background(
-                                    Circle()
-                                        .fill(Color.black.opacity(0.2))
-                                )
-                                .scaleEffect(iconScale)
-                                .offset(x: -6, y: -6)
+                            // Tap icon with circle below text box, aligned to right edge
+                            HStack {
+                                Spacer()
+                                
+                                Image(systemName: showingAnswer ? "arrow.right.circle.fill" : "hand.tap.fill")
+                                    .font(.system(size: 16, weight: .medium))
+                                    .foregroundColor(.white.opacity(iconOpacity))
+                                    .scaleEffect(iconScale)
+                                    .frame(width: 44, height: 44)
+                                    .background(
+                                        Circle()
+                                            .fill(.ultraThinMaterial.opacity(0.9))
+                                            .overlay(
+                                                Circle()
+                                                    .fill(Color.black.opacity(0.4))
+                                            )
+                                            .shadow(color: .black.opacity(0.3), radius: 8, x: 0, y: 2)
+                                    )
+                            }
                         }
-                        .padding(.horizontal, 32)
+                        .onTapGesture {
+                            handleTap()
+                        }
+                        .padding(.horizontal, 16)
                     }
                     
                     Spacer()
@@ -164,9 +141,6 @@ struct BergenWordsFlashcardView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .padding(.top, geometry.size.height * 0.2)
             }
-        }
-        .onTapGesture {
-            handleTap()
         }
         .onAppear {
             loadRandomWords()
@@ -181,6 +155,21 @@ struct BergenWordsFlashcardView: View {
     }
     
     // MARK: - Helper Methods
+    
+    private func getQuestionText(for word: BergenWordWithCategory) -> String {
+        return word.word.term
+    }
+    
+    private func getAnswerText(for word: BergenWordWithCategory) -> String {
+        var answer = word.word.correctOptions.joined(separator: "\n")
+        
+        // Add explanation if available
+        if let explanation = word.word.longExplanation {
+            answer += "\n\n" + explanation.joined(separator: "\n")
+        }
+        
+        return answer
+    }
     
     private func loadRandomWords() {
         words = wordsService.getRandomWords(count: 20) // Load 20 random words

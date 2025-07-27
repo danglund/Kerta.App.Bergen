@@ -33,16 +33,6 @@
 		A1234567890123456789014E /* NewspaperComplaintService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1234567890123456789014F /* NewspaperComplaintService.swift */; };
 		A1234567890123456789014G /* NewspaperComplaintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1234567890123456789014H /* NewspaperComplaintView.swift */; };
 		A1234567890123456789014I /* ComplaintPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1234567890123456789014J /* ComplaintPreviewView.swift */; };
-		74513EF0F94549DF8F66994C /* BergenOrdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5095EE71365F4B6CAFF59C0A /* BergenOrdView.swift */; };
-		F6F510C8BA0B40F39B3B94C3 /* BergenWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F64FE85DD164DD6BC5B3A26 /* BergenWord.swift */; };
-		23D53B78D745451FAA0C181D /* BergenWordsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8DCEC3F18D45C39193C45A /* BergenWordsService.swift */; };
-		77D798F54A164F7F893C3123 /* BergenWordsLandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28F314E7FDE45498C4CA95F /* BergenWordsLandingView.swift */; };
-		59B482D977234A7F949DDB83 /* BergenWordsFlashcardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB70334F48184C028C25BB3E /* BergenWordsFlashcardView.swift */; };
-		EAC7C7742BBB40DFAF95A43D /* BergenWordsQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DCB1D1AC4C497C98530E4B /* BergenWordsQuizView.swift */; };
-		A1234567890123456789015A /* bergenske-uttrykk.json in Resources */ = {isa = PBXBuildFile; fileRef = A1234567890123456789015B /* bergenske-uttrykk.json */; };
-		A1234567890123456789015C /* bergenske-ord-betydning.json in Resources */ = {isa = PBXBuildFile; fileRef = A1234567890123456789015D /* bergenske-ord-betydning.json */; };
-		A1234567890123456789015E /* dialektord-ting-tang.json in Resources */ = {isa = PBXBuildFile; fileRef = A1234567890123456789015F /* dialektord-ting-tang.json */; };
-		A1234567890123456789015G /* dialektord-personer.json in Resources */ = {isa = PBXBuildFile; fileRef = A1234567890123456789015H /* dialektord-personer.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,16 +63,6 @@
 		A1234567890123456789014F /* NewspaperComplaintService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewspaperComplaintService.swift; sourceTree = "<group>"; };
 		A1234567890123456789014H /* NewspaperComplaintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewspaperComplaintView.swift; sourceTree = "<group>"; };
 		A1234567890123456789014J /* ComplaintPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplaintPreviewView.swift; sourceTree = "<group>"; };
-		5095EE71365F4B6CAFF59C0A /* BergenOrdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BergenOrdView.swift; sourceTree = "<group>"; };
-		7F64FE85DD164DD6BC5B3A26 /* BergenWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BergenWord.swift; sourceTree = "<group>"; };
-		6A8DCEC3F18D45C39193C45A /* BergenWordsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BergenWordsService.swift; sourceTree = "<group>"; };
-		C28F314E7FDE45498C4CA95F /* BergenWordsLandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BergenWordsLandingView.swift; sourceTree = "<group>"; };
-		DB70334F48184C028C25BB3E /* BergenWordsFlashcardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BergenWordsFlashcardView.swift; sourceTree = "<group>"; };
-		83DCB1D1AC4C497C98530E4B /* BergenWordsQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BergenWordsQuizView.swift; sourceTree = "<group>"; };
-		A1234567890123456789015B /* bergenske-uttrykk.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "bergenske-uttrykk.json"; sourceTree = "<group>"; };
-		A1234567890123456789015D /* bergenske-ord-betydning.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "bergenske-ord-betydning.json"; sourceTree = "<group>"; };
-		A1234567890123456789015F /* dialektord-ting-tang.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "dialektord-ting-tang.json"; sourceTree = "<group>"; };
-		A1234567890123456789015H /* dialektord-personer.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "dialektord-personer.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,18 +110,11 @@
 			children = (
 				A1234567890123456789012D /* BergenButtonView.swift */,
 				A1234567890123456789012F /* KartView.swift */,
-				5095EE71365F4B6CAFF59C0A /* BergenOrdView.swift */,
 				A1234567890123456789012H /* FaktaView.swift */,
 				A1234567890123456789012J /* MerView.swift */,
 				FEEC4C8E97AE405993DB5F02 /* WeatherView.swift */,
-<<<<<<< HEAD
 				A1234567890123456789014H /* NewspaperComplaintView.swift */,
 				A1234567890123456789014J /* ComplaintPreviewView.swift */,
-=======
-				C28F314E7FDE45498C4CA95F /* BergenWordsLandingView.swift */,
-				DB70334F48184C028C25BB3E /* BergenWordsFlashcardView.swift */,
-				83DCB1D1AC4C497C98530E4B /* BergenWordsQuizView.swift */,
->>>>>>> origin/feature/update-meir-and-kart
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -152,11 +125,7 @@
 				A1234567890123456789012L /* AudioService.swift */,
 				A1234567890123456789012N /* LocationService.swift */,
 				7A5E379F4114433D82C03888 /* RainCheckProvider.swift */,
-<<<<<<< HEAD
 				A1234567890123456789014F /* NewspaperComplaintService.swift */,
-=======
-				6A8DCEC3F18D45C39193C45A /* BergenWordsService.swift */,
->>>>>>> origin/feature/update-meir-and-kart
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -165,7 +134,6 @@
 			isa = PBXGroup;
 			children = (
 				A1234567890123456789012P /* BergenFact.swift */,
-				7F64FE85DD164DD6BC5B3A26 /* BergenWord.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -177,7 +145,6 @@
 				A1234567890123456789014B /* newspaper-complaints.json */,
 				A1234567890123456789014D /* newspapers.json */,
 				A1234567890123456789011J /* Audio */,
-				A1234567890123456789014I /* BergenWords */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -196,17 +163,6 @@
 				A1234567890123456789013L /* grieg-mountain-king.mp3 */,
 			);
 			path = Audio;
-			sourceTree = "<group>";
-		};
-		A1234567890123456789014I /* BergenWords */ = {
-			isa = PBXGroup;
-			children = (
-				A1234567890123456789014A /* bergenske-uttrykk.json */,
-				A1234567890123456789014B /* bergenske-ord-betydning.json */,
-				A1234567890123456789014C /* dialektord-ting-tang.json */,
-				A1234567890123456789014D /* dialektord-personer.json */,
-			);
-			path = BergenWords;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,15 +234,8 @@
 				A1234567890123456789013C /* Bergen5.mp3 in Resources */,
 				A1234567890123456789013E /* Bergen6.mp3 in Resources */,
 				A1234567890123456789013G /* Bergen7.m4a in Resources */,
-<<<<<<< HEAD
 				A1234567890123456789013I /* grieg-morning.mp3 in Resources */,
 				A1234567890123456789013K /* grieg-mountain-king.mp3 in Resources */,
-=======
-				A1234567890123456789014E /* bergenske-uttrykk.json in Resources */,
-				A1234567890123456789014F /* bergenske-ord-betydning.json in Resources */,
-				A1234567890123456789014G /* dialektord-ting-tang.json in Resources */,
-				A1234567890123456789014H /* dialektord-personer.json in Resources */,
->>>>>>> origin/feature/update-meir-and-kart
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +249,6 @@
 				A1234567890123456789012A /* BergenApp.swift in Sources */,
 				A1234567890123456789012C /* BergenButtonView.swift in Sources */,
 				A1234567890123456789012E /* KartView.swift in Sources */,
-				74513EF0F94549DF8F66994C /* BergenOrdView.swift in Sources */,
 				A1234567890123456789012G /* FaktaView.swift in Sources */,
 				A1234567890123456789012I /* MerView.swift in Sources */,
 				A1234567890123456789012K /* AudioService.swift in Sources */,
@@ -308,17 +256,9 @@
 				A1234567890123456789012O /* BergenFact.swift in Sources */,
 				E11AF9D70D3F45D4B843CA78 /* WeatherView.swift in Sources */,
 				2B9729723C714DC180E95987 /* RainCheckProvider.swift in Sources */,
-<<<<<<< HEAD
 				A1234567890123456789014E /* NewspaperComplaintService.swift in Sources */,
 				A1234567890123456789014G /* NewspaperComplaintView.swift in Sources */,
 				A1234567890123456789014I /* ComplaintPreviewView.swift in Sources */,
-=======
-				F6F510C8BA0B40F39B3B94C3 /* BergenWord.swift in Sources */,
-				23D53B78D745451FAA0C181D /* BergenWordsService.swift in Sources */,
-				77D798F54A164F7F893C3123 /* BergenWordsLandingView.swift in Sources */,
-				59B482D977234A7F949DDB83 /* BergenWordsFlashcardView.swift in Sources */,
-				EAC7C7742BBB40DFAF95A43D /* BergenWordsQuizView.swift in Sources */,
->>>>>>> origin/feature/update-meir-and-kart
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
