@@ -317,7 +317,7 @@ struct BergenWordsQuizView: View {
         }
         .onAppear {
             loadQuizQuestions()
-            audioService.playAnitrasDreamMusic()
+            // Music continues from Bergensk landing page - don't restart
         }
         .onDisappear {
             stopTimer()

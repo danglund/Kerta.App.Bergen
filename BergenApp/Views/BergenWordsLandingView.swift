@@ -191,8 +191,13 @@ struct BergenWordsLandingView: View {
             }
         }
         .onAppear {
-            // Start background music for Bergen words
-            print("🎵 Starting Bergen words music")
+            // Start Anitra's Dream music for Bergen words section only if not already playing
+            if audioService.currentTrack?.title != "Anitra's Dream" {
+                audioService.playAnitrasDreamMusic()
+                print("🎵 Started Anitra's Dream music for Bergen words")
+            } else {
+                print("🎵 Anitra's Dream already playing, continuing")
+            }
         }
         .onDisappear {
             print("🎵 Stopping Bergen words music")
