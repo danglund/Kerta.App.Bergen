@@ -5,115 +5,115 @@
       "term": "Bekkalokk",
       "correct_options": ["Kummelokk"],
       "long_explanation": null,
-      "wrong_options": ["paraply", "knebeskytter", "fiskestang", "sko", "takkel", "måke"]
+      "wrong_options": ["Paraply", "Knebeskytter", "Fiskestang", "Sko", "Takkel", "Måke"]
     },
     {
       "term": "Bennaren",
       "correct_options": ["Bensinstasjon"],
       "long_explanation": null,
-      "wrong_options": ["konsumvare", "droppautomat", "bibliotek", "trikkestasjon", "navkontor", "leikeplass"]
+      "wrong_options": ["Konsumvare", "Droppautomat", "Bibliotek", "Trikkestasjon", "Navkontor", "Lekeplass"]
     },
     {
       "term": "Blautis",
       "correct_options": ["Bløtekake"],
       "long_explanation": null,
-      "wrong_options": ["brunost", "suppe", "sandwich", "isvaffel", "syltetøy", "kaffekopp"]
+      "wrong_options": ["Brunost", "Suppe", "Sandwich", "Isvaffel", "Syltetøy", "Kaffekopp"]
     },
     {
       "term": "Boss",
       "correct_options": ["Søppel"],
       "long_explanation": null,
-      "wrong_options": ["søl", "penger", "gull", "fisk", "buss", "vårbris"]
+      "wrong_options": ["Søl", "Penger", "Gull", "Fisk", "Buss", "Vårbris"]
     },
     {
       "term": "Daier",
       "correct_options": ["Bryst", "Pupper"],
       "long_explanation": null,
-      "wrong_options": ["rygg", "hake", "kne", "øre", "tå", "håndledd"]
+      "wrong_options": ["Rygg", "Hake", "Kne", "Øre", "Tå", "Håndledd"]
     },
     {
       "term": "Disse",
       "correct_options": ["Huske på lekestativ"],
       "long_explanation": null,
-      "wrong_options": ["sklie", "gyngestativ", "taustige", "sandkasse", "fotballmål", "klatrestativ"]
+      "wrong_options": ["Sklie", "Gyngestativ", "Taustige", "Sandkasse", "Fotballmål", "Klatrestativ"]
     },
     {
       "term": "Flais",
       "correct_options": ["Hårsveis"],
       "long_explanation": null,
-      "wrong_options": ["tannbørste", "bukser", "sko", "parfyme", "skjorte", "jakke"]
+      "wrong_options": ["Tannbørste", "Bukser", "Sko", "Parfyme", "Skjorte", "Jakke"]
     },
     {
       "term": "Labber",
       "correct_options": ["Sokker"],
       "long_explanation": null,
-      "wrong_options": ["hansker", "hatt", "undertøy", "skjerf", "belte", "veske"]
+      "wrong_options": ["Hansker", "Hatt", "Undertøy", "Skjerf", "Belte", "Veske"]
     },
     {
       "term": "Melodont",
       "correct_options": ["Melodi"],
       "long_explanation": null,
-      "wrong_options": ["maleri", "konsert", "lyd", "symfoni", "tekst", "tromme"]
+      "wrong_options": ["Maleri", "Konsert", "Lyd", "Symfoni", "Tekst", "Tromme"]
     },
     {
       "term": "Myggel",
       "correct_options": ["Mugg"],
       "long_explanation": null,
-      "wrong_options": ["allergi", "plass", "vann", "støv", "sopp", "is"]
+      "wrong_options": ["Allergi", "Plass", "Vann", "Støv", "Sopp", "Is"]
     },
     {
       "term": "Naien",
       "correct_options": ["Nesen"],
       "long_explanation": null,
-      "wrong_options": ["øyet", "haken", "pannen", "kjeven", "labb", "hals"]
+      "wrong_options": ["Øyet", "Haken", "Pannen", "Kjeven", "Labb", "Hals"]
     },
     {
       "term": "Pottemonè",
       "correct_options": ["Pengepung"],
       "long_explanation": null,
-      "wrong_options": ["ryggsekk", "telefon", "skrivebok", "veske", "lommebok", "lommetørkle"]
+      "wrong_options": ["Ryggsekk", "Telefon", "Skrivebok", "Veske", "Lommebok", "Lommetørkle"]
     },
     {
       "term": "Smau",
       "correct_options": ["Trang gate"],
       "long_explanation": null,
-      "wrong_options": ["torg", "stor vei", "skolevei", "bussholdeplass", "fjellsti", "elv"]
+      "wrong_options": ["Torg", "Stor vei", "Skolevei", "Bussholdeplass", "Fjellsti", "Elv"]
     },
     {
       "term": "Snått",
       "correct_options": ["Snørr"],
       "long_explanation": null,
-      "wrong_options": ["spytt", "tårer", "sår", "svette", "hår", "gave"]
+      "wrong_options": ["Spytt", "Tårer", "Sår", "Svette", "Hår", "Gave"]
     },
     {
       "term": "Sos",
       "correct_options": ["Saus"],
       "long_explanation": null,
-      "wrong_options": ["vann", "kraft", "dressing", "drikke", "syltetøy", "suppe"]
+      "wrong_options": ["Vann", "Kraft", "Dressing", "Drikke", "Syltetøy", "Suppe"]
     },
     {
       "term": "Staddaen",
       "correct_options": ["Brann stadion"],
       "long_explanation": null,
-      "wrong_options": ["fotballbane i Oslo", "skøytebane", "opera", "bibliotek", "kongresshall", "flyplass"]
+      "wrong_options": ["Fotballbane i Oslo", "Skøytebane", "Opera", "Bibliotek", "Kongresshall", "Flyplass"]
     },
     {
       "term": "Undikk",
       "correct_options": ["Underbukse"],
       "long_explanation": null,
-      "wrong_options": ["bukse", "skjorte", "t-skjorte", "hatt", "sokk", "badedrakt"]
+      "wrong_options": ["Bukse", "Skjorte", "T-skjorte", "Hatt", "Sokk", "Badedrakt"]
     },
     {
       "term": "Tebrød",
       "correct_options": ["Wienerbrød"],
       "long_explanation": null,
-      "wrong_options": ["krutonger", "sandwich", "skolefrokost", "scone", "pannekake", "kanelbolle"]
+      "wrong_options": ["Krutonger", "Sandwich", "Skolefrokost", "Scone", "Pannekake", "Kanelbolle"]
     },
     {
       "term": "Pakkenellik",
       "correct_options": ["En liten pakke", "Små poser"],
       "long_explanation": "Ofte brukt i forbindelse med reise – små pakker eller poser med nødvendigheter.",
-      "wrong_options": ["postsekk", "stor koffert", "bagasjevogn", "håndbagasje", "fraktekspress", "papirkurv"]
+      "wrong_options": ["Postsekk", "Stor koffert", "Bagasjevogn", "Håndbagasje", "Fraktekspress", "Papirkurv"]
     }
   ]
 }

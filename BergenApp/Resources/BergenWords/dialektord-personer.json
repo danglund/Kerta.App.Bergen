@@ -6,12 +6,12 @@
       "correct_options": ["Fruen i huset"],
       "long_explanation": null,
       "wrong_options": [
-        "overlegen",
-        "bussjåfør",
-        "villstyring",
-        "kjedelig person",
-        "støvlett",
-        "dumskalle"
+        "Overlegen",
+        "Bussjåfør",
+        "Villstyring",
+        "Kjedelig person",
+        "Støvlett",
+        "Dumskalle"
       ]
     },
     {
@@ -19,12 +19,12 @@
       "correct_options": ["Bortskjemt", "Kosete"],
       "long_explanation": null,
       "wrong_options": [
-        "bussjåfør",
-        "gammel mann",
-        "streng lærer",
-        "klovn",
-        "bryggesjauer",
-        "fiskesuppe"
+        "Bussjåfør",
+        "Gammel mann",
+        "Streng lærer",
+        "Klovn",
+        "Bryggesjauer",
+        "Fiskesuppe"
       ]
     },
     {
@@ -32,12 +32,12 @@
       "correct_options": ["Overlegen"],
       "long_explanation": null,
       "wrong_options": [
-        "kortvokst",
-        "utslitt",
-        "forsinket buss",
-        "hjemløs",
-        "fryktløs",
-        "mystisk"
+        "Kortvokst",
+        "Utslitt",
+        "Forsinket buss",
+        "Hjemløs",
+        "Fryktløs",
+        "Mystisk"
       ]
     },
     {
@@ -45,12 +45,12 @@
       "correct_options": ["Idiot"],
       "long_explanation": null,
       "wrong_options": [
-        "genial person",
-        "trikkefører",
-        "arkitekt",
-        "sjørøver",
-        "hjemlengsel",
-        "torden"
+        "Genial person",
+        "Trikkefører",
+        "Arkitekt",
+        "Sjørøver",
+        "Hjemlengsel",
+        "Torden"
       ]
     },
     {
@@ -58,12 +58,12 @@
       "correct_options": ["Kjæreste"],
       "long_explanation": null,
       "wrong_options": [
-        "tante",
-        "vaktmester",
-        "sydvest",
-        "postkasse",
-        "hestehov",
-        "gitarist"
+        "Tante",
+        "Vaktmester",
+        "Sydvest",
+        "Postkasse",
+        "Hestehov",
+        "Gitarist"
       ]
     },
     {
@@ -71,12 +71,12 @@
       "correct_options": ["Kompis"],
       "long_explanation": null,
       "wrong_options": [
-        "fiende",
-        "søring",
-        "vaktpost",
-        "klesklype",
-        "klagesang",
-        "smørbrød"
+        "Fiende",
+        "Søring",
+        "Vaktpost",
+        "Klesklype",
+        "Klagesang",
+        "Smørbrød"
       ]
     },
     {
@@ -84,12 +84,12 @@
       "correct_options": ["Skøyergutt", "En \"ekte\" bergenser"],
       "long_explanation": "Brukes ofte om en guttestrek-type med bergensk selvtillit og glimt i øyet.",
       "wrong_options": [
-        "politiker",
-        "brannslange",
-        "bilmekaniker",
-        "skoleuniform",
-        "grinete nabo",
-        "brostein"
+        "Politiker",
+        "Brannslange",
+        "Bilmekaniker",
+        "Skoleuniform",
+        "Grinete nabo",
+        "Brostein"
       ]
     },
     {
@@ -97,12 +97,12 @@
       "correct_options": ["Han andre", "Hun andre"],
       "long_explanation": null,
       "wrong_options": [
-        "den samme",
-        "naboens hund",
-        "bussen fra Åsane",
-        "venstre hånd",
-        "tysk turist",
-        "gammel fisk"
+        "Den samme",
+        "Naboens hund",
+        "Bussen fra Åsane",
+        "Venstre hånd",
+        "Tysk turist",
+        "Gammel fisk"
       ]
     },
     {
@@ -110,12 +110,12 @@
       "correct_options": ["Dust"],
       "long_explanation": null,
       "wrong_options": [
-        "sjakkspiller",
-        "helikopter",
-        "gullfisk",
-        "støvsuger",
-        "kaffekopp",
-        "rørlegger"
+        "Sjakkspiller",
+        "Helikopter",
+        "Gullfisk",
+        "Støvsuger",
+        "Kaffekopp",
+        "Rørlegger"
       ]
     },
     {
@@ -123,12 +123,12 @@
       "correct_options": ["Dust"],
       "long_explanation": "Brukes om noen som har gjort noe helt idiotisk – som om hjernen er byttet ut med en løkrull.",
       "wrong_options": [
-        "kryddertype",
-        "gammel måke",
-        "værmelding",
-        "bærplukker",
-        "sjøsprøyt",
-        "vindmåler"
+        "Kryddertype",
+        "Gammel måke",
+        "Værmelding",
+        "Bærplukker",
+        "Sjøsprøyt",
+        "Vindmåler"
       ]
     },
     {
@@ -139,12 +139,12 @@
       ],
       "long_explanation": null,
       "wrong_options": [
-        "onkel og tante",
-        "hybelkameratene dine",
-        "klassekamerater",
-        "nabohus",
-        "fiskere",
-        "brannsupportere"
+        "Onkel og tante",
+        "Hybelkameratene dine",
+        "Klassekamerater",
+        "Nabohus",
+        "Fiskere",
+        "Brannsupportere"
       ]
     },
     {
@@ -152,12 +152,12 @@
       "correct_options": ["Villstyring"],
       "long_explanation": null,
       "wrong_options": [
-        "organist",
-        "snøskuffe",
-        "passkontrollør",
-        "barneskole",
-        "gammel kåpe",
-        "dommerfløyte"
+        "Organist",
+        "Snøskuffe",
+        "Passkontrollør",
+        "Barneskole",
+        "Gammel kåpe",
+        "Dommerfløyte"
       ]
     },
     {
@@ -168,12 +168,12 @@
       ],
       "long_explanation": null,
       "wrong_options": [
-        "korpsleder",
-        "speiderleder",
-        "kjegle",
-        "løpesko",
-        "brødfjøl",
-        "veivesen"
+        "Korpsleder",
+        "Speiderleder",
+        "Kjegle",
+        "Løpesko",
+        "Brødfjøl",
+        "Veivesen"
       ]
     },
     {
@@ -181,12 +181,12 @@
       "correct_options": ["Skjellsord"],
       "long_explanation": null,
       "wrong_options": [
-        "hodeplagg",
-        "målebeger",
-        "tårnbygger",
-        "lastebil",
-        "kartleser",
-        "nyhetsanker"
+        "Hodeplagg",
+        "Målebeger",
+        "Tårnbygger",
+        "Lastebil",
+        "Kartleser",
+        "Nyhetsanker"
       ]
     }
   ]

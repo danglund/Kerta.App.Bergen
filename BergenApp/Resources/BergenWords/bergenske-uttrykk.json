@@ -22,7 +22,7 @@
     {
       "term": "Gå mann!",
       "correct_options": ["Jøye meg!"],
-      "long_explanation": ["Utrop som uttrykker overraskelse. Alternativ: 'gå te' Lübeck'"],
+      "long_explanation": ["Utrop som uttrykker overraskelse. Alternativ: 'Gå te Lübeck'"],
       "wrong_options": ["Bli mann", "Gå nå", "Se mann", "Hils mann", "Snakk mann", "Møt mann"]
     },
     {
@@ -38,16 +38,16 @@
       "wrong_options": ["Snakke om følelsen", "Ha det fysisk", "Se det skje", "Høre det skje", "Lese det i boka", "Smake det"]
     },
     {
-      "term": "En‑endinger",
-      "correct_options": ["Bøy personnavn med –en"],
+      "term": "En-endinger",
+      "correct_options": ["Bøy personnavn med -en"],
       "long_explanation": ["Eks: Erikaen, Tomen – vanlig i familiebruk, spesielt eldre generasjon"],
-      "wrong_options": ["Følge med –en", "Periode‑endinger", "Flertallsending", "Entallsending", "Artikkel‑ending", "Bøyningsending"]
+      "wrong_options": ["Følge med -en", "Periode-endinger", "Flertallsending", "Entallsending", "Artikkel-ending", "Bøyningsending"]
     },
     {
       "term": "Kalla",
       "correct_options": ["Hva slags", "Hvilken"],
       "long_explanation": null,
-      "wrong_options": ["Kalde ting", "Kaldt vær", "Ringe", "Tilkalle", "Invite", "Spørre om navn"]
+      "wrong_options": ["Kalde ting", "Kaldt vær", "Ringe", "Tilkalle", "Invitere", "Spørre om navn"]
     },
     {
       "term": "Ke' det går i",
@@ -63,7 +63,7 @@
     },
     {
       "term": "Knall i padden",
-      "correct_options": ["Liv/ røre", "Kjempegreier", "Kuult"],
+      "correct_options": ["Liv/røre", "Kjempegreier", "Kuult"],
       "long_explanation": ["Uttrykk brukt om noe veldig bra eller morsomt."],
       "wrong_options": ["Dårlig i padden", "Stille i padden", "Vått i padden", "Vanskelig i padden", "Dyr i padden", "Kjedelig i padden"]
     },
@@ -77,7 +77,7 @@
       "term": "Stompe kompen",
       "correct_options": ["Stupe kråke"],
       "long_explanation": null,
-      "wrong_options": ["Trampe kompen", "Stupe langt", "Hoppe lange", "Gjøre salto", "Fall enkelt", "Vinkle kompen"]
+      "wrong_options": ["Trampe kompen", "Stupe langt", "Hoppe langt", "Gjøre salto", "Falle enkelt", "Vinkle kompen"]
     },
     {
       "term": "Å kule an",
