@@ -47,6 +47,9 @@ class AudioService: ObservableObject {
     private let griegMorningPiano = "Classicals.de-Grieg-Morning-Mood-Peer-Gynt-Suite-No.1,-Op.46-Arranged-for-Piano"
     private let griegMountainKingMusicBox = "Classicals.de-Grieg-In-the-Hall-of-the-Mountain-King-Peer-Gynt-Suite-Short-Version-Arranged-for-Music-Box"
     
+    // Bergen location audio
+    private let eDuFraBergen = "e-du-fra-bergen"
+    
     init() {
         setupAudioSession()
         setupProgressTracking()
@@ -150,6 +153,81 @@ class AudioService: ObservableObject {
         playGriegMusic(griegMountainKingMusicBox)
     }
     
+    func playEDuFraBergenMusic() {
+        playBergenLocationMusic(eDuFraBergen)
+    }
+    
+    private func playBergenLocationMusic(_ musicKey: String) {
+        // Similar to playGriegMusic but with looping enabled
+        let track: MusicTrack
+        let filename: String
+        
+        switch musicKey {
+        case eDuFraBergen:
+            filename = "e-du-fra-bergen"
+            track = MusicTrack(
+                id: musicKey,
+                title: "E du fra Bergen?",
+                composer: "Traditional Bergen",
+                filename: "\(filename).m4a",
+                duration: 60.0,
+                year: 2024,
+                description: "Bergen location greeting"
+            )
+        default:
+            print("❌ Unknown Bergen music key: \(musicKey)")
+            return
+        }
+        
+        print("🎵 Attempting to play (looped): \(track.fullTitle)")
+        
+        // Try to load the file with the correct extension
+        let fileExtension = track.filename.contains(".m4a") ? "m4a" : "mp3"
+        guard let audioUrl = Bundle.main.url(forResource: filename, withExtension: fileExtension) else {
+            print("❌ Could not find music file: \(track.filename)")
+            return
+        }
+        
+        print("✅ Playing (looped): \(track.title) by \(track.composer)")
+        currentTrack = track
+        playAudioLooped(from: audioUrl)
+    }
+    
+    private func playAudioLooped(from url: URL) {
+        do {
+            // Check if we can play audio (respects system audio settings)
+            guard AVAudioSession.sharedInstance().isOtherAudioPlaying == false || 
+                  AVAudioSession.sharedInstance().category == .ambient else {
+                print("ℹ️ Audio session not available for playback")
+                return
+            }
+            
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            
+            // Enable looping
+            audioPlayer?.numberOfLoops = -1 // Infinite loop
+            
+            // Set volume to respect system settings
+            audioPlayer?.volume = 1.0 // Let system control the actual volume
+            
+            let didStart = audioPlayer?.play() ?? false
+            
+            if didStart {
+                DispatchQueue.main.async {
+                    self.isPlaying = true
+                    print("🎵 Started looped audio playback")
+                }
+            } else {
+                print("❌ Failed to start looped audio playback")
+            }
+        } catch {
+            print("❌ Audio playback error: \(error.localizedDescription)")
+            DispatchQueue.main.async {
+                self.isPlaying = false
+            }
+        }
+    }
+    
     private func playGriegMusic(_ musicKey: String) {
         // Simple inline metadata for iOS 16 compatibility
         let track: MusicTrack
@@ -189,6 +267,17 @@ class AudioService: ObservableObject {
                 year: 1875,
                 description: "Peer Gynt Suite No. 1, Op. 46 - III. Anitra's Dream"
             )
+        case eDuFraBergen:
+            filename = "e-du-fra-bergen"
+            track = MusicTrack(
+                id: musicKey,
+                title: "E du fra Bergen?",
+                composer: "Traditional Bergen",
+                filename: "\(filename).m4a",
+                duration: 60.0,
+                year: 2024,
+                description: "Bergen location greeting"
+            )
         default:
             print("❌ Unknown music key: \(musicKey)")
             return
@@ -196,7 +285,9 @@ class AudioService: ObservableObject {
         
         print("🎵 Attempting to play: \(track.fullTitle)")
         
-        guard let audioUrl = Bundle.main.url(forResource: filename, withExtension: "mp3") else {
+        // Try to load the file with the correct extension based on the track filename
+        let fileExtension = track.filename.contains(".m4a") ? "m4a" : "mp3"
+        guard let audioUrl = Bundle.main.url(forResource: filename, withExtension: fileExtension) else {
             print("❌ Could not find music file: \(track.filename)")
             return
         }

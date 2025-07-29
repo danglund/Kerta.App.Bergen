@@ -46,6 +46,7 @@
 		B1234567890123456789009A /* dialektord-personer.json in Resources */ = {isa = PBXBuildFile; fileRef = B1234567890123456789009B /* dialektord-personer.json */; };
 		B1234567890123456789010A /* dialektord-ting-tang.json in Resources */ = {isa = PBXBuildFile; fileRef = B1234567890123456789010B /* dialektord-ting-tang.json */; };
 		B1234567890123456789011A /* Classicals.de - Grieg - Peer Gynt Suite No. 1, Op. 46 - III. Anitra's Dream.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B1234567890123456789011B /* Classicals.de - Grieg - Peer Gynt Suite No. 1, Op. 46 - III. Anitra's Dream.mp3 */; };
+		4023D158A8B1461C8E8AE277 /* e-du-fra-bergen.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 5E7D81E4DB574E6AB4C016D6 /* e-du-fra-bergen.m4a */; };
 		C1234567890123456789001A /* sunny-complaints.json in Resources */ = {isa = PBXBuildFile; fileRef = C1234567890123456789001B /* sunny-complaints.json */; };
 		C1234567890123456789002A /* rainy-complaints.json in Resources */ = {isa = PBXBuildFile; fileRef = C1234567890123456789002B /* rainy-complaints.json */; };
 /* End PBXBuildFile section */
@@ -71,6 +72,7 @@
 		A1234567890123456789013H /* Bergen7.m4a */ = {isa = PBXFileReference; lastKnownFileType = audio.m4a; path = Bergen7.m4a; sourceTree = "<group>"; };
 		A1234567890123456789013J /* grieg-morning.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "grieg-morning.mp3"; sourceTree = "<group>"; };
 		A1234567890123456789013L /* grieg-mountain-king.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "grieg-mountain-king.mp3"; sourceTree = "<group>"; };
+		5E7D81E4DB574E6AB4C016D6 /* e-du-fra-bergen.m4a */ = {isa = PBXFileReference; lastKnownFileType = audio.m4a; path = "e-du-fra-bergen.m4a"; sourceTree = "<group>"; };
 		FEEC4C8E97AE405993DB5F02 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 		7A5E379F4114433D82C03888 /* RainCheckProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RainCheckProvider.swift; sourceTree = "<group>"; };
 		D1234567890123456789001B /* x-complaints.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "x-complaints.json"; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				A1234567890123456789013H /* Bergen7.m4a */,
 				A1234567890123456789013J /* grieg-morning.mp3 */,
 				A1234567890123456789013L /* grieg-mountain-king.mp3 */,
+				5E7D81E4DB574E6AB4C016D6 /* e-du-fra-bergen.m4a */,
 				B1234567890123456789011B /* Classicals.de - Grieg - Peer Gynt Suite No. 1, Op. 46 - III. Anitra's Dream.mp3 */,
 			);
 			path = Audio;
@@ -289,6 +292,7 @@
 				A1234567890123456789013G /* Bergen7.m4a in Resources */,
 				A1234567890123456789013I /* grieg-morning.mp3 in Resources */,
 				A1234567890123456789013K /* grieg-mountain-king.mp3 in Resources */,
+				4023D158A8B1461C8E8AE277 /* e-du-fra-bergen.m4a in Resources */,
 				B1234567890123456789007A /* bergenske-ord-betydning.json in Resources */,
 				B1234567890123456789008A /* bergenske-uttrykk.json in Resources */,
 				B1234567890123456789009A /* dialektord-personer.json in Resources */,

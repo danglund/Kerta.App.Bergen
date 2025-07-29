@@ -317,7 +317,13 @@ struct BergenWordsQuizView: View {
         }
         .onAppear {
             loadQuizQuestions()
-            // Music continues from Bergensk landing page - don't restart
+            // Start Anitra's Dream music for quiz
+            if audioService.currentTrack?.title != "Anitra's Dream" {
+                audioService.playAnitrasDreamMusic()
+                print("🎵 Started Anitra's Dream music for quiz")
+            } else {
+                print("🎵 Anitra's Dream already playing, continuing in quiz")
+            }
         }
         .onDisappear {
             stopTimer()

@@ -191,16 +191,8 @@ struct BergenWordsLandingView: View {
             }
         }
         .onAppear {
-            // Start Anitra's Dream music for Bergen words section only if not already playing
-            if audioService.currentTrack?.title != "Anitra's Dream" {
-                audioService.playAnitrasDreamMusic()
-                print("🎵 Started Anitra's Dream music for Bergen words")
-            } else {
-                print("🎵 Anitra's Dream already playing, continuing")
-            }
-        }
-        .onDisappear {
-            print("🎵 Stopping Bergen words music")
+            // Music will be started in Flash cards or Quiz views
+            print("🎵 Bergen words landing - no music started here")
         }
     }
 }

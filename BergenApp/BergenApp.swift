@@ -114,8 +114,8 @@ struct ContentView: View {
                 .accentColor(.blue)
                 .onChange(of: selectedTab) { newValue in
                     // Stop music when navigating away from music-enabled tabs
-                    // Fakta tab (3) plays Morning music, Bergensk tab (2) plays Anitra's Dream
-                    if audioService.isPlaying && newValue != 3 && newValue != 2 {
+                    // Kart tab (1) plays Bergen location audio, Bergensk tab (2) plays Anitra's Dream, Fakta tab (3) plays Morning music
+                    if audioService.isPlaying && newValue != 1 && newValue != 2 && newValue != 3 {
                         audioService.stopAudio()
                         print("🎵 Stopped music when leaving music tab")
                     }

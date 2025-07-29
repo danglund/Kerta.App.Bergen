@@ -145,7 +145,13 @@ struct BergenWordsFlashcardView: View {
         .onAppear {
             loadRandomWords()
             startHintTimer()
-            // Music continues from Bergensk landing page - don't restart
+            // Start Anitra's Dream music for flash cards
+            if audioService.currentTrack?.title != "Anitra's Dream" {
+                audioService.playAnitrasDreamMusic()
+                print("🎵 Started Anitra's Dream music for flash cards")
+            } else {
+                print("🎵 Anitra's Dream already playing, continuing in flash cards")
+            }
         }
         .onDisappear {
             stopHintTimer()
