@@ -26,21 +26,9 @@ struct MerView: View {
             status: .available
         ),
         FeatureItem(
-            title: "Skann en meny",
-            description: "Ta bilde av meny og få den lest opp på bergensk",
-            icon: "camera.viewfinder",
-            status: .comingSoon
-        ),
-        FeatureItem(
             title: "Lag ein spilleliste",
             description: "Få forslag til Bergen-musikk på Spotify",
             icon: "music.note.list",
-            status: .comingSoon
-        ),
-        FeatureItem(
-            title: "Finn andre bergensere",
-            description: "Se andre Bergen-folk i nærheten på kart",
-            icon: "map.circle",
             status: .comingSoon
         ),
         FeatureItem(
@@ -74,7 +62,7 @@ struct MerView: View {
                     }
                 }
             }
-            .navigationTitle("Mer")
+            .navigationTitle("Meir")
             .navigationDestination(for: String.self) { destination in
                 switch destination {
                 case "Vêret":
